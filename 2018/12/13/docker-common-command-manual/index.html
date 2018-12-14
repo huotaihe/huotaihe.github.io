@@ -5,18 +5,18 @@
     
     <title>Docker 常用命令手册 | 白马度和|Huotaihe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="1、删除所有Docker容器1docker rm `docker ps -a -q` 2、删除所有Docker镜像1docker rmi `docker images -q`">
+    <meta name="description" content="删除所有Docker容器 1docker rm `docker ps -a -q` 删除所有Docker镜像 1docker rmi `docker images -q`">
 <meta name="keywords" content="和太贺 白马度和 spring boot cloud">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker 常用命令手册">
 <meta property="og:url" content="http://blog.huotaihe.com/2018/12/13/docker-common-command-manual/index.html">
 <meta property="og:site_name" content="白马度和|Huotaihe">
-<meta property="og:description" content="1、删除所有Docker容器1docker rm `docker ps -a -q` 2、删除所有Docker镜像1docker rmi `docker images -q`">
+<meta property="og:description" content="删除所有Docker容器 1docker rm `docker ps -a -q` 删除所有Docker镜像 1docker rmi `docker images -q`">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-14T01:51:19.651Z">
+<meta property="og:updated_time" content="2018-12-14T03:28:38.607Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker 常用命令手册">
-<meta name="twitter:description" content="1、删除所有Docker容器1docker rm `docker ps -a -q` 2、删除所有Docker镜像1docker rmi `docker images -q`">
+<meta name="twitter:description" content="删除所有Docker容器 1docker rm `docker ps -a -q` 删除所有Docker镜像 1docker rmi `docker images -q`">
     
 
     
@@ -263,10 +263,18 @@ var _hmt = _hmt || [];
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h3 id="1、删除所有Docker容器"><a href="#1、删除所有Docker容器" class="headerlink" title="1、删除所有Docker容器"></a>1、删除所有Docker容器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm `docker ps -a -q`</span><br></pre></td></tr></table></figure>
-<h3 id="2、删除所有Docker镜像"><a href="#2、删除所有Docker镜像" class="headerlink" title="2、删除所有Docker镜像"></a>2、删除所有Docker镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi `docker images -q`</span><br></pre></td></tr></table></figure>
+                <div id="toc" class="toc-article">
+                <strong class="toc-title">文章目录</strong>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">删除所有Docker容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">删除所有Docker镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">登陆到Docker容器</span></a></li></ol>
+                </div>
+            
+            <h3><span id="shan-chu-suo-you-docker-rong-qi">删除所有Docker容器</span></h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm `docker ps -a -q`</span><br></pre></td></tr></table></figure>
+<h3><span id="shan-chu-suo-you-docker-jing-xiang">删除所有Docker镜像</span></h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi `docker images -q`</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h3 id="3、登陆到Docker容器"><a href="#3、登陆到Docker容器" class="headerlink" title="3、登陆到Docker容器"></a>3、登陆到Docker容器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span>  -it &lt;containerId&gt; /bin/bash</span><br></pre></td></tr></table></figure>
+<h3><span id="deng-lu-dao-docker-rong-qi">登陆到Docker容器</span></h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span>  -it &lt;containerId&gt; /bin/bash</span><br></pre></td></tr></table></figure>
 
         
         </div>
