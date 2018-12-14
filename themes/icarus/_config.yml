@@ -63,13 +63,17 @@ search:
 # Comment plugin settings
 # http://ppoffice.github.io/hexo-theme-icarus/categories/Configuration/Comment-Plugins
 comment:
-    # Name of the comment plugin
-    type: 
+    type: gitment
+    owner: huotaihe         # (required) GitHub user name
+    repo: huotaihe.github.io          # (required) GitHub repository name
+    client_id: 67d4fdced7522e210c75     # (required) OAuth application client id
+    client_secret: 1539dd9d89d920309cce0c5f45510d7af4607acb # (required) OAuth application client secret
+
 # Share plugin settings
 # http://ppoffice.github.io/hexo-theme-icarus/categories/Configuration/Share-Plugins
 share:
     # Share plugin name
-    type: 
+    type: bdshare
 # Sidebar settings.
 # Please be noted that a sidebar is only visible when it has at least one widget
 sidebar:
@@ -95,10 +99,10 @@ widgets:
         avatar: 
         gravatar: hersbit@yeah.net
         follow_link: https://github.com/huotaihe
-        social_links:
-            Github:
-                icon: fab fa-github
-                url: https://github.com/huotaihe
+        # social_links:
+        #     Github:
+        #         icon: fab fa-github
+        #         url: https://github.com/huotaihe
             # Facebook:
             #     icon: fab fa-facebook
             #     url: 'http://facebook.com'
@@ -113,7 +117,7 @@ widgets:
             #     url: /
     -
         type: toc
-        position: left
+        position: right
     -
         type: links
         position: left
@@ -159,7 +163,7 @@ plugins:
     # http://ppoffice.github.io/hexo-theme-icarus/Plugins/General/site-analytics-plugin/#Baidu-Analytics
     baidu-analytics:
         # Baidu Analytics tracking id
-        tracking_id: 
+        tracking_id: 3c72d1bbe07baab58256c46951b76fd8 
     # Hotjar user feedback plugin
     # http://ppoffice.github.io/hexo-theme-icarus/Plugins/General/site-analytics-plugin/#Hotjar
     hotjar:

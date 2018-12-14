@@ -32,5 +32,5 @@ hexo clean ; hexo g
 ```
 > 顺序执行多条命令，当;号前的命令执行完（不管是否执行成功），才执行;后的命令。
 
-# 
+------ 
 参考：https://www.cnblogs.com/koreaseal/archive/2012/05/28/2522178.html
