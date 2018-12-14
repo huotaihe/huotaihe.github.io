@@ -7,6 +7,7 @@ tags:
   - Linux
   - Shell
   - Manual
+toc: true
 ---
 要实现在一行执行多条Linux命令，分三种情况：
 
