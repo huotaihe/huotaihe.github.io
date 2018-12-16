@@ -7,18 +7,18 @@
 
 
 
-    <meta name="description" content="要实现在一行执行多条Linux命令，分三种情况： 1. &amp;amp;&amp;amp;1hexo clean &amp;amp;&amp;amp; hexo g  第2条命令只有在第1条命令成功执行之后才执行。当&amp;amp;&amp;amp;前的命令“hexo clean”成功执行后”hexo g”才执行，根据命令产生的退出码判断是否执行成功（0成功，非0失败）。">
+    <meta name="description" content="要实现在一行执行多条Linux命令，分三种情况：  &amp;amp;&amp;amp;  1hexo clean &amp;amp;&amp;amp; hexo g  第2条命令只有在第1条命令成功执行之后才执行。当&amp;amp;&amp;amp;前的命令“hexo clean”成功执行后”hexo g”才执行，根据命令产生的退出码判断是否执行成功（0成功，非0失败）。">
 <meta name="keywords" content="Linux,Shell,Manual">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux下在一行执行多条命令">
 <meta property="og:url" content="http://blog.huotaihe.com/2018/12/13/linux-common-command-manual-01/index.html">
 <meta property="og:site_name" content="白马度和|Huotaihe">
-<meta property="og:description" content="要实现在一行执行多条Linux命令，分三种情况： 1. &amp;amp;&amp;amp;1hexo clean &amp;amp;&amp;amp; hexo g  第2条命令只有在第1条命令成功执行之后才执行。当&amp;amp;&amp;amp;前的命令“hexo clean”成功执行后”hexo g”才执行，根据命令产生的退出码判断是否执行成功（0成功，非0失败）。">
+<meta property="og:description" content="要实现在一行执行多条Linux命令，分三种情况：  &amp;amp;&amp;amp;  1hexo clean &amp;amp;&amp;amp; hexo g  第2条命令只有在第1条命令成功执行之后才执行。当&amp;amp;&amp;amp;前的命令“hexo clean”成功执行后”hexo g”才执行，根据命令产生的退出码判断是否执行成功（0成功，非0失败）。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-14T09:40:12.217Z">
+<meta property="og:updated_time" content="2018-12-16T02:59:43.286Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux下在一行执行多条命令">
-<meta name="twitter:description" content="要实现在一行执行多条Linux命令，分三种情况： 1. &amp;amp;&amp;amp;1hexo clean &amp;amp;&amp;amp; hexo g  第2条命令只有在第1条命令成功执行之后才执行。当&amp;amp;&amp;amp;前的命令“hexo clean”成功执行后”hexo g”才执行，根据命令产生的退出码判断是否执行成功（0成功，非0失败）。">
+<meta name="twitter:description" content="要实现在一行执行多条Linux命令，分三种情况：  &amp;amp;&amp;amp;  1hexo clean &amp;amp;&amp;amp; hexo g  第2条命令只有在第1条命令成功执行之后才执行。当&amp;amp;&amp;amp;前的命令“hexo clean”成功执行后”hexo g”才执行，根据命令产生的退出码判断是否执行成功（0成功，非0失败）。">
 
 
 
@@ -131,10 +131,6 @@ var _hmt = _hmt || [];
                     
                 
                 
-                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
-                    <i class="fas fa-list-ul"></i>
-                </a>
-                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -171,15 +167,27 @@ var _hmt = _hmt || [];
         </h1>
         <div class="content">
             <p>要实现在一行执行多条Linux命令，分三种情况：</p>
-<h3 id="1-amp-amp"><a href="#1-amp-amp" class="headerlink" title="1. &amp;&amp;"></a>1. &amp;&amp;</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g</span><br></pre></td></tr></table></figure>
+<ol>
+<li>&amp;&amp;</li>
+</ol>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>第2条命令只有在第1条命令成功执行之后才执行。当&amp;&amp;前的命令“hexo clean”成功执行后”hexo g”才执行，根据命令产生的退出码判断是否执行成功（0成功，非0失败）。<br><a id="more"></a></p>
+<p>第2条命令只有在第1条命令成功执行之后才执行。当&amp;&amp;前的命令“hexo clean”成功执行后”hexo g”才执行，根据命令产生的退出码判断是否执行成功（0成功，非0失败）。</p>
 </blockquote>
-<h3 id="2"><a href="#2" class="headerlink" title="2. ||"></a>2. ||</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean || hexo g</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<hr>
+<ol start="2">
+<li>||<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean || hexo g</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 <blockquote>
 <p>只有||前的命令“hexo clean”执行不成功（产生了一个非0的退出码）时，才执行后面的命令。</p>
 </blockquote>
-<h3 id="2-1"><a href="#2-1" class="headerlink" title="2. ;"></a>2. ;</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean ; hexo g</span><br></pre></td></tr></table></figure>
+<hr>
+<ol start="3">
+<li>;<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean ; hexo g</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 <blockquote>
 <p>顺序执行多条命令，当;号前的命令执行完（不管是否执行成功），才执行;后的命令。</p>
 </blockquote>
@@ -410,29 +418,6 @@ var _hmt = _hmt || [];
         <div class="column-right-shadow is-hidden-widescreen ">
         
             
-<div class="card widget" id="toc">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                目录
-            </h3>
-            <ul class="menu-list"><li>
-        <a class="is-flex" href="#1-amp-amp">
-        <span class="has-mr-6">1</span>
-        <span>1. &amp;&amp;</span>
-        </a></li><li>
-        <a class="is-flex" href="#2">
-        <span class="has-mr-6">2</span>
-        <span>2. ||</span>
-        </a></li><li>
-        <a class="is-flex" href="#2-1">
-        <span class="has-mr-6">3</span>
-        <span>2. ;</span>
-        </a></li></ul>
-        </div>
-    </div>
-</div>
-
         
             
 <div class="card widget">
@@ -628,29 +613,6 @@ var _hmt = _hmt || [];
 <div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
     
         
-<div class="card widget" id="toc">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                目录
-            </h3>
-            <ul class="menu-list"><li>
-        <a class="is-flex" href="#1-amp-amp">
-        <span class="has-mr-6">1</span>
-        <span>1. &amp;&amp;</span>
-        </a></li><li>
-        <a class="is-flex" href="#2">
-        <span class="has-mr-6">2</span>
-        <span>2. ||</span>
-        </a></li><li>
-        <a class="is-flex" href="#2-1">
-        <span class="has-mr-6">3</span>
-        <span>2. ;</span>
-        </a></li></ul>
-        </div>
-    </div>
-</div>
-
     
         
 <div class="card widget">
