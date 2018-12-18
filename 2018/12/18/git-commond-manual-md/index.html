@@ -2,22 +2,23 @@
 <html  lang="zh">
 <head>
     <meta charset="utf-8">
-<title>分类: 深入spring boot - 白马度和|Huotaihe</title>
+<title>git 常用命令手册 - 白马度和|Huotaihe</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
 
 
-    <meta name="description" content="和太贺的个人技术博客">
+    <meta name="description" content="收集工作中常用到的git 命令；只收集不易记忆的，常用的不在罗列都在脑子里。 分支管理查看当前的本地分支与远程分支的关联关系1git branch -vv">
 <meta name="keywords" content="和太贺 白马度和 spring boot cloud">
-<meta property="og:type" content="website">
-<meta property="og:title" content="白马度和|Huotaihe">
-<meta property="og:url" content="http://blog.huotaihe.com/categories/Spring/深入spring-boot/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git 常用命令手册">
+<meta property="og:url" content="http://blog.huotaihe.com/2018/12/18/git-commond-manual-md/index.html">
 <meta property="og:site_name" content="白马度和|Huotaihe">
-<meta property="og:description" content="和太贺的个人技术博客">
+<meta property="og:description" content="收集工作中常用到的git 命令；只收集不易记忆的，常用的不在罗列都在脑子里。 分支管理查看当前的本地分支与远程分支的关联关系1git branch -vv">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-12-18T11:47:38.017Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="白马度和|Huotaihe">
-<meta name="twitter:description" content="和太贺的个人技术博客">
+<meta name="twitter:title" content="git 常用命令手册">
+<meta name="twitter:description" content="收集工作中常用到的git 命令；只收集不易记忆的，常用的不在罗列都在脑子里。 分支管理查看当前的本地分支与远程分支的关联关系1git branch -vv">
 
 
 
@@ -144,96 +145,87 @@ var _hmt = _hmt || [];
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-12-18T03:33:58.000Z">2018-12-18</time>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                git 常用命令手册
+            
+        </h1>
+        <div class="content">
+            <p>收集工作中常用到的git 命令；<br>只收集不易记忆的，常用的不在罗列都在脑子里。</p>
+<h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><h3 id="查看当前的本地分支与远程分支的关联关系"><a href="#查看当前的本地分支与远程分支的关联关系" class="headerlink" title="查看当前的本地分支与远程分支的关联关系"></a>查看当前的本地分支与远程分支的关联关系</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -vv</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="把本地分支与远程origin的分支进行关联处理"><a href="#把本地分支与远程origin的分支进行关联处理" class="headerlink" title="把本地分支与远程origin的分支进行关联处理"></a>把本地分支与远程origin的分支进行关联处理</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">#&lt;branch name&gt; 代表变量，运行时替换为你远程的分支名</span></span><br><span class="line">git branch --<span class="hljs-built_in">set</span>-upstream-to=origin/&lt;branch name&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="把当前本地分支推送到指定的远程分支"><a href="#把当前本地分支推送到指定的远程分支" class="headerlink" title="把当前本地分支推送到指定的远程分支"></a>把当前本地分支推送到指定的远程分支</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">#&lt;branch name&gt; 代表变量，运行时替换为你远程的分支名</span></span><br><span class="line">git push origin &lt;branch name&gt;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="编辑管理"><a href="#编辑管理" class="headerlink" title="编辑管理"></a>编辑管理</h2><h3 id="回滚未提交的代码"><a href="#回滚未提交的代码" class="headerlink" title="回滚未提交的代码"></a>回滚未提交的代码</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">#本地所有修改的。没有的提交的，都返回到原来的状态</span></span><br><span class="line">git checkout .</span><br></pre></td></tr></table></figure>
+<h3 id="回滚到某个版本节点"><a href="#回滚到某个版本节点" class="headerlink" title="回滚到某个版本节点"></a>回滚到某个版本节点</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">##&lt;hash&gt; 代表你要回滚到的记录点的hash id</span></span><br><span class="line"><span class="hljs-comment">#返回到某个节点，不保留修改。</span></span><br><span class="line">git reset --hard &lt;<span class="hljs-built_in">hash</span>&gt;</span><br><span class="line"><span class="hljs-comment">#返回到某个节点。保留修改 </span></span><br><span class="line">git reset --soft &lt;<span class="hljs-built_in">hash</span>&gt;</span><br></pre></td></tr></table></figure>
+        </div>
+        
+        
+        
+        <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+</div>
+<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+        
+    </div>
+</div>
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2018/12/18/springboot-skip-test/">
+                <span class="level-item">springboot 打包时跳过单元测试</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
     <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/categories">分类</a></li>
-            
-            <li><a href="/categories/Spring/">Spring</a></li>
-            
-            <li class="is-active"><a href="#" aria-current="page">深入spring boot</a></li>
-        </ul>
-        </nav>
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="comment-container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://www.wenjunjiang.win/js/gitment.js"></script>
+<script>
+	var gitment = new Gitment({
+		id: '2018/12/18/git-commond-manual-md/',
+		owner: 'huotaihe',
+		repo: 'huotaihe.github.io',
+		oauth: {
+			client_id: '67d4fdced7522e210c75',
+			client_secret: '1539dd9d89d920309cce0c5f45510d7af4607acb',
+		},
+	})
+	gitment.render('comment-container')
+</script>
+
     </div>
 </div>
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-18T02:14:49.000Z">2018-12-18</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Spring/">Spring</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Spring/深入spring-boot/">深入spring boot</a>
-                </div>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/12/18/springboot-skip-test/">springboot 打包时跳过单元测试</a>
-            
-        </h1>
-        <div class="content">
-            
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-17T06:51:39.000Z">2018-12-17</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Spring/">Spring</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Spring/深入spring-boot/">深入spring boot</a>
-                </div>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/12/17/springboot-runtime-log-level/">springboot 运行时修改日志打印级别</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><p> Spring Boot 在 spring-boot-starter-actuator 模块中提供了日志相关的 EndPoint，通过该 EndPoint 可以在运行时不需要重启服务就可以修改日志的打印级别。</p>
-<p> 解决了以前修改日志打印级别必须要重启服务的烦恼。</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/12/17/springboot-runtime-log-level/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
 </div>
                 
 
