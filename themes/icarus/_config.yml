@@ -5,7 +5,8 @@ favicon: /images/favicon.svg
 # Path or URL to RSS atom.xml
 rss: 
 # Path or URL to the website's logo to be shown on the left of the navigation bar or footer
-logo: /images/logo.svg
+logo: 
+    text: 白马度和|Huotaihe
 # Open Graph metadata
 # https://hexo.io/docs/helpers.html#open-graph
 open_graph:
