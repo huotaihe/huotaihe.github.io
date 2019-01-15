@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="白马度和|Huotaihe">
 <meta property="og:description" content="收集工作中常用到的Linux 命令；只收集不易记忆的，常用的不在罗列都在脑子里。 目录管理查看当前目录总共占的容量，而不单独列出各子项占用的容量1du -sh">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-20T12:08:02.009Z">
+<meta property="og:updated_time" content="2019-01-15T08:30:12.067Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 常用命令手册">
 <meta name="twitter:description" content="收集工作中常用到的Linux 命令；只收集不易记忆的，常用的不在罗列都在脑子里。 目录管理查看当前目录总共占的容量，而不单独列出各子项占用的容量1du -sh">
@@ -164,7 +164,7 @@ var _hmt = _hmt || [];
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 98 个字)
+                    2 分钟 读完 (大约 275 个字)
                 </span>
                 
             </div>
@@ -180,6 +180,12 @@ var _hmt = _hmt || [];
 <h2 id="目录管理"><a href="#目录管理" class="headerlink" title="目录管理"></a>目录管理</h2><h3 id="查看当前目录总共占的容量，而不单独列出各子项占用的容量"><a href="#查看当前目录总共占的容量，而不单独列出各子项占用的容量" class="headerlink" title="查看当前目录总共占的容量，而不单独列出各子项占用的容量"></a>查看当前目录总共占的容量，而不单独列出各子项占用的容量</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du -sh</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <h3 id="查看当前目录下一级子文件和子目录占用的磁盘容量"><a href="#查看当前目录下一级子文件和子目录占用的磁盘容量" class="headerlink" title="查看当前目录下一级子文件和子目录占用的磁盘容量"></a>查看当前目录下一级子文件和子目录占用的磁盘容量</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du -lh --max-depth=1</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="VIM"><a href="#VIM" class="headerlink" title="VIM"></a>VIM</h2><h3 id="vim-统计字符串出现次数（词频）"><a href="#vim-统计字符串出现次数（词频）" class="headerlink" title="vim 统计字符串出现次数（词频）"></a>vim 统计字符串出现次数（词频）</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># &lt;pattern&gt; 是需要统计的字符串</span></span><br><span class="line">:%s/&lt;pattern&gt;//gn</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>% - 操作区间，全文本；可以使用1, $或行区间替代<br>    s - substitute<br>    <pattern> - 查询字符串<br>    // - 无替代文本。如果偏好，中间可以加任意字符！建议添加‘～’,重复上次查询<br>    g - Replace all occurrences in the line.  Without this argument,  replacement occurs only for the first occurrence in each line.因此，如果不用此标志，就变成统计出现pattern的行数。<br>    n - Report the number of matches, do not actually substitute.这是核心标志，也是达到目的的标志。同时也说明了为什么’//‘之间可以添加任意字符！</pattern></p>
+</blockquote>
+
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -966,7 +972,7 @@ var _hmt = _hmt || [];
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2018 白马度和&nbsp;
+                &copy; 2019 白马度和&nbsp;
                 Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
                         href="http://github.com/ppoffice/hexo-theme-icarus">Icarus</a>
                 </p>
