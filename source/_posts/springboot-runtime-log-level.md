@@ -159,14 +159,14 @@ public class LogController {
 ### 测试日志级别
 启动应用并访问http://127.0.0.1:8080/log 
 控制台打印如图，Spring Boot 默认的 ROOT 日志级别是INFO。
-![这里写图片描述](https://img-blog.csdn.net/20180801154444508?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hldGFpaGUwNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![](http://images.huotaihe.com/2019-01-17-11-13-04.png)
 
 ### 修改指定包的日志级别
 通过/actuator/loggers端点提供的 POST 请求，修改包路径com.github.huotaihe.spring.boot.log 的日志级别为DEBUG。
 
 - 发送 post 请求到
  http://127.0.0.1:8080/actuator/loggers/com.github.huotaihe.spring.boot.log
-![postman 构造的请求](https://img-blog.csdn.net/20180801155022275?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hldGFpaGUwNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![](http://images.huotaihe.com/2019-01-17-11-16-15.png)
 
 > header 信息必须添加
 > Content-Type:application/json
@@ -182,7 +182,7 @@ http://127.0.0.1:8080/actuator/loggers/com.github.huotaihe.spring.boot.log
 ```
 - 再次访问http://127.0.0.1:8080/log 得到
 
-![这里写图片描述](https://img-blog.csdn.net/2018080116001474?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2hldGFpaGUwNw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![](http://images.huotaihe.com/2019-01-17-11-17-40.png)
 
 ## 源代码
 [github](https://github.com/huotaihe/spring-boot-learn/tree/master/runtime-log-level)
