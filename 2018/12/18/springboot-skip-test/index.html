@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="白马度和|Huotaihe">
 <meta property="og:description" content="通过修改pom.xml 在项目的pom.xml 文件的 &amp;lt;properties&amp;gt; 节点中增加如下节点12&amp;lt;!-- maven方式跳过maven test, 等同 mvn package -Dmaven.test.skip=true --&amp;gt;&amp;lt;maven.test.skip&amp;gt;true&amp;lt;/maven.test.skip&amp;gt;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-16T12:31:05.893Z">
+<meta property="og:updated_time" content="2019-01-17T02:39:03.148Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="springboot 打包时跳过单元测试">
 <meta name="twitter:description" content="通过修改pom.xml 在项目的pom.xml 文件的 &amp;lt;properties&amp;gt; 节点中增加如下节点12&amp;lt;!-- maven方式跳过maven test, 等同 mvn package -Dmaven.test.skip=true --&amp;gt;&amp;lt;maven.test.skip&amp;gt;true&amp;lt;/maven.test.skip&amp;gt;">
@@ -168,7 +168,7 @@ var _hmt = _hmt || [];
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 70 个字)
+                    几秒 读完 (大约 78 个字)
                 </span>
                 
             </div>
@@ -185,7 +185,7 @@ var _hmt = _hmt || [];
 </blockquote>
 <a id="more"></a>
 <h2 id="通过命令行参数"><a href="#通过命令行参数" class="headerlink" title="通过命令行参数"></a>通过命令行参数</h2><blockquote>
-<p>mvn命令后添加参数 -Dmaven.test.skip<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn package -Dmaven.test.skip=<span class="hljs-literal">true</span></span><br></pre></td></tr></table></figure></p>
+<p>mvn命令后添加参数 -Dmaven.test.skip 或者 -DskipTests<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mvn package -Dmaven.test.skip=<span class="hljs-literal">true</span></span><br><span class="line"><span class="hljs-comment"># 或者</span></span><br><span class="line">mvn install -DskipTests</span><br></pre></td></tr></table></figure></p>
 </blockquote>
 
         </div>
