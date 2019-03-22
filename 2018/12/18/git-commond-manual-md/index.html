@@ -7,18 +7,18 @@
 
 
 
-    <meta name="description" content="收集工作中常用到的git 命令；只收集不易记忆的，常用的不在罗列都在脑子里。 分支管理查看当前的本地分支与远程分支的关联关系1git branch -vv">
+    <meta name="description" content="收集工作中常用到的git 命令；只收集不易记忆的，常用的不在罗列都在脑子里。 分支管理本地仓库绑定远程仓库1git remote add origin &amp;lt;remote repositorie&amp;gt; 查看当前的本地分支与远程分支的关联关系1git branch -vv">
 <meta name="keywords" content="和太贺 白马度和 spring boot cloud">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git 常用命令手册">
 <meta property="og:url" content="http://blog.huotaihe.com/2018/12/18/git-commond-manual-md/index.html">
 <meta property="og:site_name" content="白马度和|Huotaihe">
-<meta property="og:description" content="收集工作中常用到的git 命令；只收集不易记忆的，常用的不在罗列都在脑子里。 分支管理查看当前的本地分支与远程分支的关联关系1git branch -vv">
+<meta property="og:description" content="收集工作中常用到的git 命令；只收集不易记忆的，常用的不在罗列都在脑子里。 分支管理本地仓库绑定远程仓库1git remote add origin &amp;lt;remote repositorie&amp;gt; 查看当前的本地分支与远程分支的关联关系1git branch -vv">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-18T11:47:38.017Z">
+<meta property="og:updated_time" content="2019-03-22T06:27:18.276Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git 常用命令手册">
-<meta name="twitter:description" content="收集工作中常用到的git 命令；只收集不易记忆的，常用的不在罗列都在脑子里。 分支管理查看当前的本地分支与远程分支的关联关系1git branch -vv">
+<meta name="twitter:description" content="收集工作中常用到的git 命令；只收集不易记忆的，常用的不在罗列都在脑子里。 分支管理本地仓库绑定远程仓库1git remote add origin &amp;lt;remote repositorie&amp;gt; 查看当前的本地分支与远程分支的关联关系1git branch -vv">
 
 
 
@@ -160,7 +160,7 @@ var _hmt = _hmt || [];
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 240 个字)
+                    2 分钟 读完 (大约 255 个字)
                 </span>
                 
             </div>
@@ -173,7 +173,8 @@ var _hmt = _hmt || [];
         </h1>
         <div class="content">
             <p>收集工作中常用到的git 命令；<br>只收集不易记忆的，常用的不在罗列都在脑子里。</p>
-<h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><h3 id="查看当前的本地分支与远程分支的关联关系"><a href="#查看当前的本地分支与远程分支的关联关系" class="headerlink" title="查看当前的本地分支与远程分支的关联关系"></a>查看当前的本地分支与远程分支的关联关系</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -vv</span><br></pre></td></tr></table></figure>
+<h2 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h2><h3 id="本地仓库绑定远程仓库"><a href="#本地仓库绑定远程仓库" class="headerlink" title="本地仓库绑定远程仓库"></a>本地仓库绑定远程仓库</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin &lt;remote repositorie&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="查看当前的本地分支与远程分支的关联关系"><a href="#查看当前的本地分支与远程分支的关联关系" class="headerlink" title="查看当前的本地分支与远程分支的关联关系"></a>查看当前的本地分支与远程分支的关联关系</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -vv</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <h3 id="把本地分支与远程origin的分支进行关联处理"><a href="#把本地分支与远程origin的分支进行关联处理" class="headerlink" title="把本地分支与远程origin的分支进行关联处理"></a>把本地分支与远程origin的分支进行关联处理</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">#&lt;branch name&gt; 代表变量，运行时替换为你远程的分支名</span></span><br><span class="line">git branch --<span class="hljs-built_in">set</span>-upstream-to=origin/&lt;branch name&gt;</span><br></pre></td></tr></table></figure>
 <h3 id="把当前本地分支推送到指定的远程分支"><a href="#把当前本地分支推送到指定的远程分支" class="headerlink" title="把当前本地分支推送到指定的远程分支"></a>把当前本地分支推送到指定的远程分支</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">#&lt;branch name&gt; 代表变量，运行时替换为你远程的分支名</span></span><br><span class="line">git push origin &lt;branch name&gt;</span><br></pre></td></tr></table></figure>
