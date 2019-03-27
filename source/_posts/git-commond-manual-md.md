@@ -8,6 +8,24 @@ tags:
 
 
 ## 分支管理
+
+### 本地仓库绑定远程仓库
+```bash
+git remote add origin <remote repositorie>
+```
+### 修改远程仓库地址
+```bash
+## 方式一 通过修改远程地址
+git remote set-url origin <remote repositorie> 
+## 方式二 先删除后添加
+git remote rm origin
+git remote add origin <remote repositorie> 
+
+## 方式三修改confige文件
+vim .git/confiG
+
+```
+
 ### 查看当前的本地分支与远程分支的关联关系
 
 ```bash
