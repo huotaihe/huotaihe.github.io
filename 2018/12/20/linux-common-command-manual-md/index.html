@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="白马度和|Huotaihe">
 <meta property="og:description" content="收集工作中常用到的Linux 命令；只收集不易记忆的，常用的不在罗列都在脑子里。 目录管理查看当前目录总共占的容量，而不单独列出各子项占用的容量1du -sh">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-15T08:30:12.067Z">
+<meta property="og:updated_time" content="2019-04-29T05:34:02.071Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 常用命令手册">
 <meta name="twitter:description" content="收集工作中常用到的Linux 命令；只收集不易记忆的，常用的不在罗列都在脑子里。 目录管理查看当前目录总共占的容量，而不单独列出各子项占用的容量1du -sh">
@@ -164,7 +164,7 @@ var _hmt = _hmt || [];
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 275 个字)
+                    2 分钟 读完 (大约 312 个字)
                 </span>
                 
             </div>
@@ -181,7 +181,9 @@ var _hmt = _hmt || [];
 <a id="more"></a>
 <h3 id="查看当前目录下一级子文件和子目录占用的磁盘容量"><a href="#查看当前目录下一级子文件和子目录占用的磁盘容量" class="headerlink" title="查看当前目录下一级子文件和子目录占用的磁盘容量"></a>查看当前目录下一级子文件和子目录占用的磁盘容量</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du -lh --max-depth=1</span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="VIM"><a href="#VIM" class="headerlink" title="VIM"></a>VIM</h2><h3 id="vim-统计字符串出现次数（词频）"><a href="#vim-统计字符串出现次数（词频）" class="headerlink" title="vim 统计字符串出现次数（词频）"></a>vim 统计字符串出现次数（词频）</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># &lt;pattern&gt; 是需要统计的字符串</span></span><br><span class="line">:%s/&lt;pattern&gt;//gn</span><br></pre></td></tr></table></figure>
+<h2 id="系统管理"><a href="#系统管理" class="headerlink" title="系统管理"></a>系统管理</h2><h4 id="查看端口占用情况查看端口占用情况"><a href="#查看端口占用情况查看端口占用情况" class="headerlink" title="查看端口占用情况查看端口占用情况"></a>查看端口占用情况查看端口占用情况</h4><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsof -i:&lt;port&gt;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="VIM"><a href="#VIM" class="headerlink" title="VIM"></a>VIM</h2><h3 id="vim-统计字符串出现次数（词频）"><a href="#vim-统计字符串出现次数（词频）" class="headerlink" title="vim 统计字符串出现次数（词频）"></a>vim 统计字符串出现次数（词频）</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># &lt;pattern&gt; 是需要统计的字符串</span></span><br><span class="line">:%s/&lt;pattern&gt;//gn</span><br><span class="line"></span><br><span class="line">%s/Ø/\r/g</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">## 删除所有换行符号</span></span><br><span class="line">%s\/\n\/\/gc</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>% - 操作区间，全文本；可以使用1, $或行区间替代<br>    s - substitute<br>    <pattern> - 查询字符串<br>    // - 无替代文本。如果偏好，中间可以加任意字符！建议添加‘～’,重复上次查询<br>    g - Replace all occurrences in the line.  Without this argument,  replacement occurs only for the first occurrence in each line.因此，如果不用此标志，就变成统计出现pattern的行数。<br>    n - Report the number of matches, do not actually substitute.这是核心标志，也是达到目的的标志。同时也说明了为什么’//‘之间可以添加任意字符！</pattern></p>
 </blockquote>
@@ -247,6 +249,13 @@ var _hmt = _hmt || [];
 
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/04/17/rabbitmq-install-on-centos7-md/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">在Centos7 上搭建rabbitmq</span>
+            </a>
+        </div>
         
         
         <div class="level-end">
@@ -334,7 +343,7 @@ var _hmt = _hmt || [];
                         分类
                     </p>
                     <p class="title has-text-weight-normal">
-                        4
+                        3
                     </p>
                 </div>
             </div>
@@ -344,7 +353,7 @@ var _hmt = _hmt || [];
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        9
+                        8
                     </p>
                 </div>
             </div>
@@ -429,15 +438,7 @@ var _hmt = _hmt || [];
             <span class="level-end">
                 <span class="level-item tag">2</span>
             </span>
-        </a></li></ul></li><li>
-        <a class="level is-marginless" href="/categories/Spring-Security/">
-            <span class="level-start">
-                <span class="level-item">Spring Security</span>
-            </span>
-            <span class="level-end">
-                <span class="level-item tag">1</span>
-            </span>
-        </a></li>
+        </a></li></ul></li>
             </ul>
         </div>
     </div>
@@ -449,7 +450,7 @@ var _hmt = _hmt || [];
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/Linux/" style="font-size: 15px;">Linux</a> <a href="/tags/Manual/" style="font-size: 15px;">Manual</a> <a href="/tags/Security/" style="font-size: 10px;">Security</a> <a href="/tags/Shell/" style="font-size: 15px;">Shell</a> <a href="/tags/Spring/" style="font-size: 20px;">Spring</a> <a href="/tags/Springboot/" style="font-size: 15px;">Springboot</a> <a href="/tags/log/" style="font-size: 10px;">log</a> <a href="/tags/打包/" style="font-size: 10px;">打包</a> <a href="/tags/权限/" style="font-size: 10px;">权限</a>
+        <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/Manual/" style="font-size: 20px;">Manual</a> <a href="/tags/Shell/" style="font-size: 20px;">Shell</a> <a href="/tags/Spring/" style="font-size: 20px;">Spring</a> <a href="/tags/Springboot/" style="font-size: 20px;">Springboot</a> <a href="/tags/log/" style="font-size: 10px;">log</a> <a href="/tags/rabbitmq/" style="font-size: 10px;">rabbitmq</a> <a href="/tags/打包/" style="font-size: 10px;">打包</a>
     </div>
 </div>
 
@@ -465,6 +466,25 @@ var _hmt = _hmt || [];
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/04/17/rabbitmq-install-on-centos7-md/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="在Centos7 上搭建rabbitmq">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-17T05:18:53.000Z">2019-04-17</time></div>
+                    <a href="/2019/04/17/rabbitmq-install-on-centos7-md/" class="has-link-black-ter is-size-6">在Centos7 上搭建rabbitmq</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -542,25 +562,6 @@ var _hmt = _hmt || [];
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2018/12/13/linux-common-command-manual-01/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Linux下在一行执行多条命令">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-13T05:53:24.000Z">2018-12-13</time></div>
-                    <a href="/2018/12/13/linux-common-command-manual-01/" class="has-link-black-ter is-size-6">Linux下在一行执行多条命令</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Linux-常用命令手册/">Linux 常用命令手册</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -574,23 +575,23 @@ var _hmt = _hmt || [];
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2018/12/">
                 <span class="level-start">
                     <span class="level-item">十二月 2018</span>
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">6</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/09/">
-                <span class="level-start">
-                    <span class="level-item">九月 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
                 </span>
             </a>
         </li>
@@ -631,17 +632,6 @@ var _hmt = _hmt || [];
                 </li>
                 
                 <li>
-                    <a class="level is-marginless" href="/tags/Security/">
-                        <span class="level-start">
-                            <span class="level-item">Security</span>
-                        </span>
-                        <span class="level-end">
-                            <span class="level-item tag">1</span>
-                        </span>
-                    </a>
-                </li>
-                
-                <li>
                     <a class="level is-marginless" href="/tags/Shell/">
                         <span class="level-start">
                             <span class="level-item">Shell</span>
@@ -658,7 +648,7 @@ var _hmt = _hmt || [];
                             <span class="level-item">Spring</span>
                         </span>
                         <span class="level-end">
-                            <span class="level-item tag">3</span>
+                            <span class="level-item tag">2</span>
                         </span>
                     </a>
                 </li>
@@ -686,9 +676,9 @@ var _hmt = _hmt || [];
                 </li>
                 
                 <li>
-                    <a class="level is-marginless" href="/tags/打包/">
+                    <a class="level is-marginless" href="/tags/rabbitmq/">
                         <span class="level-start">
-                            <span class="level-item">打包</span>
+                            <span class="level-item">rabbitmq</span>
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
@@ -697,9 +687,9 @@ var _hmt = _hmt || [];
                 </li>
                 
                 <li>
-                    <a class="level is-marginless" href="/tags/权限/">
+                    <a class="level is-marginless" href="/tags/打包/">
                         <span class="level-start">
-                            <span class="level-item">权限</span>
+                            <span class="level-item">打包</span>
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
@@ -734,6 +724,25 @@ var _hmt = _hmt || [];
         
         <article class="media">
             
+            <a href="/2019/04/17/rabbitmq-install-on-centos7-md/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="在Centos7 上搭建rabbitmq">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-17T05:18:53.000Z">2019-04-17</time></div>
+                    <a href="/2019/04/17/rabbitmq-install-on-centos7-md/" class="has-link-black-ter is-size-6">在Centos7 上搭建rabbitmq</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2018/12/20/linux-common-command-manual-md/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="Linux 常用命令手册">
@@ -808,25 +817,6 @@ var _hmt = _hmt || [];
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2018/12/13/linux-common-command-manual-01/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Linux下在一行执行多条命令">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-13T05:53:24.000Z">2018-12-13</time></div>
-                    <a href="/2018/12/13/linux-common-command-manual-01/" class="has-link-black-ter is-size-6">Linux下在一行执行多条命令</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Linux-常用命令手册/">Linux 常用命令手册</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -840,23 +830,23 @@ var _hmt = _hmt || [];
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2018/12/">
                 <span class="level-start">
                     <span class="level-item">十二月 2018</span>
                 </span>
                 <span class="level-end">
                     <span class="level-item tag">6</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
-            <a class="level is-marginless" href="/archives/2018/09/">
-                <span class="level-start">
-                    <span class="level-item">九月 2018</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
                 </span>
             </a>
         </li>
@@ -897,17 +887,6 @@ var _hmt = _hmt || [];
                 </li>
                 
                 <li>
-                    <a class="level is-marginless" href="/tags/Security/">
-                        <span class="level-start">
-                            <span class="level-item">Security</span>
-                        </span>
-                        <span class="level-end">
-                            <span class="level-item tag">1</span>
-                        </span>
-                    </a>
-                </li>
-                
-                <li>
                     <a class="level is-marginless" href="/tags/Shell/">
                         <span class="level-start">
                             <span class="level-item">Shell</span>
@@ -924,7 +903,7 @@ var _hmt = _hmt || [];
                             <span class="level-item">Spring</span>
                         </span>
                         <span class="level-end">
-                            <span class="level-item tag">3</span>
+                            <span class="level-item tag">2</span>
                         </span>
                     </a>
                 </li>
@@ -952,9 +931,9 @@ var _hmt = _hmt || [];
                 </li>
                 
                 <li>
-                    <a class="level is-marginless" href="/tags/打包/">
+                    <a class="level is-marginless" href="/tags/rabbitmq/">
                         <span class="level-start">
-                            <span class="level-item">打包</span>
+                            <span class="level-item">rabbitmq</span>
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
@@ -963,9 +942,9 @@ var _hmt = _hmt || [];
                 </li>
                 
                 <li>
-                    <a class="level is-marginless" href="/tags/权限/">
+                    <a class="level is-marginless" href="/tags/打包/">
                         <span class="level-start">
-                            <span class="level-item">权限</span>
+                            <span class="level-item">打包</span>
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
