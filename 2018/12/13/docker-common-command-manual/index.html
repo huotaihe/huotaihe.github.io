@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="白马度和|Huotaihe">
 <meta property="og:description" content="删除所有Docker容器1docker rm `docker ps -a -q` 删除所有Docker镜像1docker rmi `docker images -q`">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-16T09:46:44.673Z">
+<meta property="og:updated_time" content="2019-05-13T12:50:24.546Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker 常用命令手册">
 <meta name="twitter:description" content="删除所有Docker容器1docker rm `docker ps -a -q` 删除所有Docker镜像1docker rmi `docker images -q`">
@@ -164,7 +164,7 @@ var _hmt = _hmt || [];
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 90 个字)
+                    2 分钟 读完 (大约 278 个字)
                 </span>
                 
             </div>
@@ -184,6 +184,10 @@ var _hmt = _hmt || [];
 <h3 id="重新命名镜像"><a href="#重新命名镜像" class="headerlink" title="重新命名镜像"></a>重新命名镜像</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker tag &lt;imageId&gt; &lt;image name&gt;</span><br></pre></td></tr></table></figure>
 <p>例子</p>
 <figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker tag ca1b6b825289 huotaihe/selenium:latest</span><br></pre></td></tr></table></figure>
+<h3 id="启动容器时通过启动命令绑定HOST"><a href="#启动容器时通过启动命令绑定HOST" class="headerlink" title="启动容器时通过启动命令绑定HOST"></a>启动容器时通过启动命令绑定HOST</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --rm -ti --add-host=&lt;host1&gt;:&lt;ip1&gt; --add-host=&lt;host2&gt;:&lt;ip2&gt; &lt;imageId|imageName&gt;</span><br></pre></td></tr></table></figure>
+<p>例子</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -ti --add-host=www.baidu.com:127.0.0.1 --add-host=www.google.com:127.0.0.1 centos</span><br></pre></td></tr></table></figure>
+<p>登录容器验证<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">root@13c025719aaa /]<span class="hljs-comment"># ping www.baidu.com</span></span><br><span class="line">PING www.baidu.com (127.0.0.1) 56(84) bytes of data.</span><br><span class="line">64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=0.048 ms</span><br><span class="line">64 bytes from localhost (127.0.0.1): icmp_seq=2 ttl=64 time=0.044 ms</span><br><span class="line">64 bytes from localhost (127.0.0.1): icmp_seq=3 ttl=64 time=0.038 ms</span><br><span class="line">64 bytes from localhost (127.0.0.1): icmp_seq=4 ttl=64 time=0.046 ms</span><br><span class="line">^C</span><br><span class="line">--- www.baidu.com ping statistics ---</span><br><span class="line">4 packets transmitted, 4 received, 0% packet loss, time 2999ms</span><br><span class="line">rtt min/avg/max/mdev = 0.038/0.044/0.048/0.003 ms</span><br><span class="line">[root@13c025719aaa /]<span class="hljs-comment"># ping www.google.com</span></span><br><span class="line">PING www.google.com (127.0.0.1) 56(84) bytes of data.</span><br><span class="line">64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=0.045 ms</span><br><span class="line">64 bytes from localhost (127.0.0.1): icmp_seq=2 ttl=64 time=0.042 ms</span><br><span class="line">64 bytes from localhost (127.0.0.1): icmp_seq=3 ttl=64 time=0.051 ms</span><br><span class="line">64 bytes from localhost (127.0.0.1): icmp_seq=4 ttl=64 time=0.043 ms</span><br><span class="line">64 bytes from localhost (127.0.0.1): icmp_seq=5 ttl=64 time=0.046 ms</span><br><span class="line">^C</span><br><span class="line">--- www.google.com ping statistics ---</span><br><span class="line">5 packets transmitted, 5 received, 0% packet loss, time 3999ms</span><br><span class="line">rtt min/avg/max/mdev = 0.042/0.045/0.051/0.006 ms</span><br><span class="line">[root@13c025719aaa /]<span class="hljs-comment">#</span></span><br></pre></td></tr></table></figure></p>
 
         </div>
         
@@ -466,6 +470,10 @@ var _hmt = _hmt || [];
         <a class="is-flex" href="#重新命名镜像">
         <span class="has-mr-6">5</span>
         <span>重新命名镜像</span>
+        </a></li><li>
+        <a class="is-flex" href="#启动容器时通过启动命令绑定HOST">
+        <span class="has-mr-6">6</span>
+        <span>启动容器时通过启动命令绑定HOST</span>
         </a></li></ul>
         </div>
     </div>
@@ -752,6 +760,10 @@ var _hmt = _hmt || [];
         <a class="is-flex" href="#重新命名镜像">
         <span class="has-mr-6">5</span>
         <span>重新命名镜像</span>
+        </a></li><li>
+        <a class="is-flex" href="#启动容器时通过启动命令绑定HOST">
+        <span class="has-mr-6">6</span>
+        <span>启动容器时通过启动命令绑定HOST</span>
         </a></li></ul>
         </div>
     </div>
