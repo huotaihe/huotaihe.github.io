@@ -24,9 +24,23 @@ du -lh --max-depth=1
 ```
 -----
 ## 系统管理
-#### 查看端口占用情况查看端口占用情况
+### 查看端口占用情况查看端口占用情况
 ```bash
 lsof -i:<port>
+```
+### 查看操作系统的发行版本
+```bash
+lsb_release -a
+```
+> 例子
+
+```bash
+[root@localhost ~]# lsb_release -a
+LSB Version:	:core-4.1-amd64:core-4.1-noarch
+Distributor ID:	CentOS
+Description:	CentOS Linux release 7.3.1611 (Core)
+Release:	7.3.1611
+Codename:	Core
 ```
 -----
 ## VIM

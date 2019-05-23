@@ -2,6 +2,7 @@
 title: 在Centos7 上搭建rabbitmq
 date: 2019-04-17 13:18:53
 tags: rabbitmq
+toc: true
 ---
 ### 安装erlang
 ```bash
