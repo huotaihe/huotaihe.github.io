@@ -1,5 +1,8 @@
 ---
 title: 记一次docker  容器把宿主机系统盘写满的事件
+toc: true
+date: 2019-05-23 18:51:39
+categories: [生产问题解决]
 tags:
   - Docker
   - Linux
@@ -9,7 +12,7 @@ categories:
 date: 2019-05-23 18:51:39
 ---
 
-
+ 
 ## 环境信息
 - Docker version: 1.13.1
 - Linux version: CentOS Linux release 7.3.1611 (Core)
