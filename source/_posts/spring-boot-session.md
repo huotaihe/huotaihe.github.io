@@ -7,6 +7,7 @@ tags:
   - temp
 date: 2019-06-18 11:11:00
 updated: 2019-06-18 11:11:00
+#thumbnail: http://images.huotaihe.com/icon-spring-boot.png
 ---
 
 
