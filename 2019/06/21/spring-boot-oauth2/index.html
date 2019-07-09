@@ -2,23 +2,23 @@
 <html  lang="zh">
 <head>
     <meta charset="utf-8">
-<title>Linux 下批量重命名文件 - 白马度和|Huotaihe</title>
+<title>Spring Boot 搭建Oauth2 认证系统 - 白马度和|Huotaihe</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
 
 
-    <meta name="description" content="需求 需要将目录下文件明”?” 及以后的内容去掉  文件格式  123456[root@localhost]# ls |grep ?base.css?t=24bg-limited-count.png?hash=558ca0ebg-limited-normal.png?hash=3d4abb8bg-limited-time.png?hash=8deb2abbitmap.png?hash=c6835a">
+    <meta name="description" content="spring-security-oauth 简介OAuth2是一种广泛使用的授权框架。 Spring Security OAuth 提供了OAuth的实现，为OAuth 的提供者和消费者提供了支持，并且支持OAuth1和OAth2.0。 在学习spring security oauth 之前，需要掌握并理解OAuth，并且理解它解决了哪些应用场景，不了的话可以阅读它的官方文档；同时开发者也需要书序">
 <meta name="keywords" content="temp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux 下批量重命名文件">
-<meta property="og:url" content="http://blog.huotaihe.com/2019/06/05/linux-batch-rename-files/index.html">
+<meta property="og:title" content="Spring Boot 搭建Oauth2 认证系统">
+<meta property="og:url" content="http://blog.huotaihe.com/2019/06/21/spring-boot-oauth2/index.html">
 <meta property="og:site_name" content="白马度和|Huotaihe">
-<meta property="og:description" content="需求 需要将目录下文件明”?” 及以后的内容去掉  文件格式  123456[root@localhost]# ls |grep ?base.css?t=24bg-limited-count.png?hash=558ca0ebg-limited-normal.png?hash=3d4abb8bg-limited-time.png?hash=8deb2abbitmap.png?hash=c6835a">
+<meta property="og:description" content="spring-security-oauth 简介OAuth2是一种广泛使用的授权框架。 Spring Security OAuth 提供了OAuth的实现，为OAuth 的提供者和消费者提供了支持，并且支持OAuth1和OAth2.0。 在学习spring security oauth 之前，需要掌握并理解OAuth，并且理解它解决了哪些应用场景，不了的话可以阅读它的官方文档；同时开发者也需要书序">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-05T11:21:31.000Z">
+<meta property="og:updated_time" content="2019-06-21T06:44:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux 下批量重命名文件">
-<meta name="twitter:description" content="需求 需要将目录下文件明”?” 及以后的内容去掉  文件格式  123456[root@localhost]# ls |grep ?base.css?t=24bg-limited-count.png?hash=558ca0ebg-limited-normal.png?hash=3d4abb8bg-limited-time.png?hash=8deb2abbitmap.png?hash=c6835a">
+<meta name="twitter:title" content="Spring Boot 搭建Oauth2 认证系统">
+<meta name="twitter:description" content="spring-security-oauth 简介OAuth2是一种广泛使用的授权框架。 Spring Security OAuth 提供了OAuth的实现，为OAuth 的提供者和消费者提供了支持，并且支持OAuth1和OAth2.0。 在学习spring security oauth 之前，需要掌握并理解OAuth，并且理解它解决了哪些应用场景，不了的话可以阅读它的官方文档；同时开发者也需要书序">
 
 
 
@@ -158,7 +158,7 @@ var _hmt = _hmt || [];
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-05T11:21:31.000Z">2019-06-05</time>
+                <time class="level-item has-text-grey" datetime="2019-06-21T06:44:51.000Z">2019-06-21</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/temp/">temp</a>
@@ -168,7 +168,7 @@ var _hmt = _hmt || [];
                 <span class="level-item has-text-grey">
                     
                     
-                    1 分钟 读完 (大约 162 个字)
+                    18 分钟 读完 (大约 2649 个字)
                 </span>
                 
             </div>
@@ -176,23 +176,69 @@ var _hmt = _hmt || [];
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                Linux 下批量重命名文件
+                Spring Boot 搭建Oauth2 认证系统
             
         </h1>
         <div class="content">
-            <h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><blockquote>
-<p>需要将目录下文件明”?” 及以后的内容去掉</p>
-</blockquote>
-<h2 id="文件格式"><a href="#文件格式" class="headerlink" title="文件格式"></a>文件格式</h2>  <figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost]<span class="hljs-comment"># ls |grep ?</span></span><br><span class="line">base.css?t=24</span><br><span class="line"><span class="hljs-built_in">bg</span>-limited-count.png?<span class="hljs-built_in">hash</span>=558ca0e</span><br><span class="line"><span class="hljs-built_in">bg</span>-limited-normal.png?<span class="hljs-built_in">hash</span>=3d4abb8</span><br><span class="line"><span class="hljs-built_in">bg</span>-limited-time.png?<span class="hljs-built_in">hash</span>=8deb2ab</span><br><span class="line">bitmap.png?<span class="hljs-built_in">hash</span>=c6835a4</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><h2 id="Linux-实现"><a href="#Linux-实现" class="headerlink" title="Linux 实现"></a>Linux 实现</h2><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">## 先声明关键字</span></span><br><span class="line">[root@localhost]<span class="hljs-comment"># b="\\?"</span></span><br><span class="line"><span class="hljs-comment">## 用循环批量修改</span></span><br><span class="line"><span class="hljs-keyword">for</span> var <span class="hljs-keyword">in</span> `ls |grep ?`; <span class="hljs-keyword">do</span> mv -f <span class="hljs-variable">$var</span> ` <span class="hljs-built_in">echo</span> <span class="hljs-variable">$&#123;var%$b*&#125;</span>`; <span class="hljs-keyword">done</span></span><br></pre></td></tr></table></figure>
-<h3 id="mac"><a href="#mac" class="headerlink" title="mac"></a>mac</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">## 先声明关键字</span></span><br><span class="line">b=<span class="hljs-string">"?"</span></span><br><span class="line"><span class="hljs-comment">## 用循环批量修改</span></span><br><span class="line"><span class="hljs-keyword">for</span> var <span class="hljs-keyword">in</span> `ls |grep <span class="hljs-string">"?"</span>`; <span class="hljs-keyword">do</span> mv -f <span class="hljs-variable">$var</span> `<span class="hljs-built_in">echo</span> <span class="hljs-variable">$&#123;var%$b*&#125;</span>`; <span class="hljs-keyword">done</span></span><br></pre></td></tr></table></figure>
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost]<span class="hljs-comment"># ls</span></span><br><span class="line"> base.css</span><br><span class="line"> <span class="hljs-built_in">bg</span>-limited-count.png</span><br><span class="line"> <span class="hljs-built_in">bg</span>-limited-normal.png</span><br><span class="line"> <span class="hljs-built_in">bg</span>-limited-time.png</span><br><span class="line"> bitmap.png</span><br></pre></td></tr></table></figure>
-<hr>
-<p>参考资料</p>
+            <h2 id="spring-security-oauth-简介"><a href="#spring-security-oauth-简介" class="headerlink" title="spring-security-oauth 简介"></a>spring-security-oauth 简介</h2><p>OAuth2是一种广泛使用的授权框架。</p>
+<p>Spring Security OAuth 提供了OAuth的实现，为OAuth 的提供者和消费者提供了支持，并且支持OAuth1和OAth2.0。</p>
+<p>在学习spring security oauth 之前，需要掌握并理解OAuth，并且理解它解决了哪些应用场景，不了的话可以阅读它的<a href="https://oauth.net/" target="_blank" rel="noopener">官方文档</a>；同时开发者也需要书序Spring和Spring Security 的工作原理。<br><a id="more"></a></p>
+<h2 id="环境信息"><a href="#环境信息" class="headerlink" title="环境信息"></a>环境信息</h2><ul>
+<li>Spring Boot - 2.1.3.RELEASE</li>
+<li>JDK - 8</li>
+<li>maven - 3.5.2</li>
+</ul>
+<h2 id="1-搭建授权服务"><a href="#1-搭建授权服务" class="headerlink" title="1. 搭建授权服务"></a>1. 搭建授权服务</h2><p>目前，Spring Security 还没有为OAuth2.0认证服务器提供实现。但是Spring Security OAuth项目 为该功能提供了支持，Spring Security OAuth 将被Spring Security 完全取代。在此之前，我们可以用spring-security-oauth2-autoconfigure 模块很容易的配置出OAuth2.0 授权服务器。</p>
+<p>详细说明可以参考它的说明文档: <a href="https://docs.spring.io/spring-security-oauth2-boot/docs/2.1.6.RELEASE/reference/htmlsingle/" target="_blank" rel="noopener">https://docs.spring.io/spring-security-oauth2-boot/docs/2.1.6.RELEASE/reference/htmlsingle/</a></p>
+<h3 id="利用spring-security-oauth2-boot-自动化配置搭建"><a href="#利用spring-security-oauth2-boot-自动化配置搭建" class="headerlink" title="利用spring-security-oauth2-boot 自动化配置搭建"></a>利用spring-security-oauth2-boot 自动化配置搭建</h3><h4 id="添加pom依赖"><a href="#添加pom依赖" class="headerlink" title="添加pom依赖"></a>添加pom依赖</h4><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-devtools<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>runtime<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">optional</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">optional</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.projectlombok<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>lombok<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">optional</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">optional</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-test<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>test<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-comment">&lt;!--启用 oauth2 需要引入security 和 oauth2-autoconfigure  --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-security<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.security.oauth.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-security-oauth2-autoconfigure<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>2.1.6.RELEASE<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="在入口主类启用-EnableAuthorizationServer注解"><a href="#在入口主类启用-EnableAuthorizationServer注解" class="headerlink" title="在入口主类启用@EnableAuthorizationServer注解"></a>在入口主类启用@EnableAuthorizationServer注解</h4><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@SpringBootApplication</span></span><br><span class="line"><span class="hljs-meta">@EnableAuthorizationServer</span></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SpringBootOauthServerApplication</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(SpringBootOauthServerApplication.class, args);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="添加相关配置"><a href="#添加相关配置" class="headerlink" title="添加相关配置"></a>添加相关配置</h4><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">spring.security.user.name=server</span><br><span class="line">spring.security.user.password=qweqwe123</span><br><span class="line">security.oauth2.client.client-id=oauth2-server</span><br><span class="line">security.oauth2.client.client-secret=qweqwe123</span><br><span class="line">## 官方说明文档并没有要求添加该项，但是 不加scope配置获取token会报错，</span><br><span class="line">security.oauth2.client.scope=1</span><br></pre></td></tr></table></figure>
+<h4 id="启动配置oauth2-server-的springboot-工程"><a href="#启动配置oauth2-server-的springboot-工程" class="headerlink" title="启动配置oauth2 server 的springboot 工程"></a>启动配置oauth2 server 的springboot 工程</h4><h4 id="测试授权服务器"><a href="#测试授权服务器" class="headerlink" title="测试授权服务器"></a>测试授权服务器</h4><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">## 发起获取token请求</span></span><br><span class="line">curl oauth2-server:qweqwe123@localhost:8080/oauth/token -d grant_type=password -d </span><br><span class="line">username=server -d password=qweqwe123</span><br></pre></td></tr></table></figure>
+<pre><code>&gt; /token endpoint 的认证凭据是配置文件中的client-id和client-secret
+&gt; 用户的认证凭据是正常的spring security 用户
+</code></pre><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">## 控制台打印如下信息说明授权服务器配置成功</span></span><br><span class="line">&#123;<span class="hljs-string">"access_token"</span>:<span class="hljs-string">"aed587ec-a3cb-4953-89c8-5399d41dd8cd"</span>,<span class="hljs-string">"token_type"</span>:<span class="hljs-string">"bearer"</span>,<span class="hljs-string">"refresh_token"</span>:<span class="hljs-string">"5267069b-fc9a-490e-befb-ed11564e05e1"</span>,<span class="hljs-string">"expires_in"</span>:43199,<span class="hljs-string">"scope"</span>:<span class="hljs-string">"1"</span>&#125;%</span><br></pre></td></tr></table></figure>
+<h2 id="2-搭建资源服务"><a href="#2-搭建资源服务" class="headerlink" title="2. 搭建资源服务"></a>2. 搭建资源服务</h2><p>要使用Access Token 我们需要搭建一个资源服务器(Resource Server), 资源服务器可以是一个独立的服务，也可以和认证服务器搭建在同一个服务。<br>创建资源服务器非常简单，只需要在主类上添加@EnableResourceServer, 并且提供一些配置允许服务器解码access token。</p>
+<p>如果你的资源服务器同时也是认证服务器，应用一直知道如何解码access token 了，这是什么都不用配置。如果你的应用是一个独立的资源服务，你需要为应用提供如下几个配置项：</p>
 <ul>
-<li><a href="https://blog.csdn.net/wuyinggui10000/article/details/52779364" target="_blank" rel="noopener">https://blog.csdn.net/wuyinggui10000/article/details/52779364</a></li>
-<li><a href="https://www.cnblogs.com/pangblog/p/3243931.html" target="_blank" rel="noopener">https://www.cnblogs.com/pangblog/p/3243931.html</a></li>
+<li>security.oauth2.resource.user-info-uri 使用 Pivotal Web Services   的/me 资源</li>
+<li>security.oauth2.resource.token-info-uri</li>
+</ul>
+<p>如果你同时设置了user-info-uri和token-info-uri，你可以配置一个flag说明哪个配置优先(prefer-token-info=true 为默认配置)。</p>
+<p>另外，如果你的tokens 是JWTS 可以替代user-info-uri 或者token-info-uri。我们可以配置一个<kbd>security.oauth2.resource.jwt.key-value</kbd> 用来对token进行本地解码(security.oauth2.resource.jwt.key-value 是验证秘钥)。校验秘钥可以是堆成秘钥也可以是PEM-encoded RSA 公钥。如果你没有key且它是公共的，<br>您可以使用security.oauth2.resource.jwt.key-uri提供可以下载的URI（作为具有“value”字段的JSON对象）。 例如。 在PWS上：<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> curl https://uaa.run.pivotal.io/token_key</span><br><span class="line"> <span class="hljs-comment">## 返回值</span></span><br><span class="line">&#123;<span class="hljs-string">"kty"</span>:<span class="hljs-string">"RSA"</span>,<span class="hljs-string">"e"</span>:<span class="hljs-string">"AQAB"</span>,<span class="hljs-string">"use"</span>:<span class="hljs-string">"sig"</span>,<span class="hljs-string">"kid"</span>:<span class="hljs-string">"sha2-2017-01-20-key"</span>,<span class="hljs-string">"alg"</span>:<span class="hljs-string">"RS256"</span>,<span class="hljs-string">"value"</span>:<span class="hljs-string">"-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyH6kYCP29faDAUPKtei3\nV/Zh8eCHyHRDHrD0iosvgHuaakK1AFHjD19ojuPiTQm8r8nEeQtHb6mDi1LvZ03e\nEWxpvWwFfFVtCyBqWr5wn6IkY+ZFXfERLn2NCn6sMVxcFV12sUtuqD+jrW8MnTG7\nhofQqxmVVKKsZiXCvUSzfiKxDgoiRuD3MJSoZ0nQTHVmYxlFHuhTEETuTqSPmOXd\n/xJBVRi5WYCjt1aKRRZEz04zVEBVhVkr2H84qcVJHcfXFu4JM6dg0nmTjgd5cZUN\ncwA1KhK2/Qru9N0xlk9FGD2cvrVCCPWFPvZ1W7U7PBWOSBBH6GergA+dk2vQr7Ho\nlQIDAQAB\n-----END PUBLIC KEY-----"</span>,<span class="hljs-string">"n"</span>:<span class="hljs-string">"AMh-pGAj9vX2gwFDyrXot1f2YfHgh8h0Qx6w9IqLL4B7mmpCtQBR4w9faI7j4k0JvK_JxHkLR2-pg4tS72dN3hFsab1sBXxVbQsgalq-cJ-iJGPmRV3xES59jQp-rDFcXBVddrFLbqg_o61vDJ0xu4aH0KsZlVSirGYlwr1Es34isQ4KIkbg9zCUqGdJ0Ex1ZmMZRR7oUxBE7k6kj5jl3f8SQVUYuVmAo7dWikUWRM9OM1RAVYVZK9h_OKnFSR3H1xbuCTOnYNJ5k44HeXGVDXMANSoStv0K7vTdMZZPRRg9nL61Qgj1hT72dVu1OzwVjkgQR-hnq4APnZNr0K-x6JU"</span>&#125;%</span><br></pre></td></tr></table></figure></p>
+<p>此外，如果您的授权服务器具有返回一组JSON Web密钥（JWK）的端点，则可以配置security.oauth2.resource.jwk.key-set-uri<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl https://uaa.run.pivotal.io/token_keys</span><br><span class="line"><span class="hljs-comment">## 返回值</span></span><br><span class="line">&#123;<span class="hljs-string">"keys"</span>:[&#123;<span class="hljs-string">"kty"</span>:<span class="hljs-string">"RSA"</span>,<span class="hljs-string">"e"</span>:<span class="hljs-string">"AQAB"</span>,<span class="hljs-string">"use"</span>:<span class="hljs-string">"sig"</span>,<span class="hljs-string">"kid"</span>:<span class="hljs-string">"sha2-2017-01-20-key"</span>,<span class="hljs-string">"alg"</span>:<span class="hljs-string">"RS256"</span>,<span class="hljs-string">"value"</span>:<span class="hljs-string">"-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyH6kYCP29faDAUPKtei3\nV/Zh8eCHyHRDHrD0iosvgHuaakK1AFHjD19ojuPiTQm8r8nEeQtHb6mDi1LvZ03e\nEWxpvWwFfFVtCyBqWr5wn6IkY+ZFXfERLn2NCn6sMVxcFV12sUtuqD+jrW8MnTG7\nhofQqxmVVKKsZiXCvUSzfiKxDgoiRuD3MJSoZ0nQTHVmYxlFHuhTEETuTqSPmOXd\n/xJBVRi5WYCjt1aKRRZEz04zVEBVhVkr2H84qcVJHcfXFu4JM6dg0nmTjgd5cZUN\ncwA1KhK2/Qru9N0xlk9FGD2cvrVCCPWFPvZ1W7U7PBWOSBBH6GergA+dk2vQr7Ho\nlQIDAQAB\n-----END PUBLIC KEY-----"</span>,<span class="hljs-string">"n"</span>:<span class="hljs-string">"AMh-pGAj9vX2gwFDyrXot1f2YfHgh8h0Qx6w9IqLL4B7mmpCtQBR4w9faI7j4k0JvK_JxHkLR2-pg4tS72dN3hFsab1sBXxVbQsgalq-cJ-iJGPmRV3xES59jQp-rDFcXBVddrFLbqg_o61vDJ0xu4aH0KsZlVSirGYlwr1Es34isQ4KIkbg9zCUqGdJ0Ex1ZmMZRR7oUxBE7k6kj5jl3f8SQVUYuVmAo7dWikUWRM9OM1RAVYVZK9h_OKnFSR3H1xbuCTOnYNJ5k44HeXGVDXMANSoStv0K7vTdMZZPRRg9nL61Qgj1hT72dVu1OzwVjkgQR-hnq4APnZNr0K-x6JU"</span>&#125;]&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>同时配置JWT和JWK 属性会引起报错。security.oauth2.resource.jwt.key-uri (或 security.oauth2.resource.jwt.key-value) 和 security.oauth2.resource.jwk.key-set-uri 应该只配置一个。</p>
+</blockquote>
+<blockquote>
+<p>如果你是用security.oauth2.resource.jwt.key-uri 和security.oauth2.resource.jwk.key-set-uri，应用程序启动时，认证服务器需要保持运行。<br>如果找不到密钥，它会记录警告，并告诉您如何解决问题。</p>
+</blockquote>
+<p>OAuth2 资源服务器被security.oauth2.resource.filter-order 过滤器链保护，默认情况下在actuator endpoints 的保护过滤器之后。（因此，除非您更改顺序，否则执行器端点将保留在HTTP Basic上）</p>
+<h2 id="3-搭建客户端服务"><a href="#3-搭建客户端服务" class="headerlink" title="3. 搭建客户端服务"></a>3. 搭建客户端服务</h2><p>要让你的额web-app变为变为OAuth2 客户端，只需要简单的添加@EnableOAuth2Client注解，Spring Boot 将会创建一个OAuth2ClientContext和OAuth2ProtectedResourceDetails，这些都是创建OAuth2RestOperations所必需的。Spring Boot 没有自动创建这样的bean，但是你可以轻松的创建。<br><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@Bean</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> OAuth2RestTemplate <span class="hljs-title">oauth2RestTemplate</span><span class="hljs-params">(OAuth2ClientContext oauth2ClientContext,</span></span></span><br><span class="line"><span class="hljs-function"><span class="hljs-params">        OAuth2ProtectedResourceDetails details)</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> OAuth2RestTemplate(details, oauth2ClientContext);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>您可能希望添加限定符并检查配置，因为可能在应用程序中定义了多个RestTemplate。</p>
+</blockquote>
+<p>此配置中使用security.oauth2.client.*作为凭据(与在授权服务器中的配置相同)，此外还需要授权服务器的授权和令牌URI。如下面配置项：<br><figure class="highlight yml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attr">security:</span></span><br><span class="line"><span class="hljs-attr">  oauth2:</span></span><br><span class="line"><span class="hljs-attr">    client:</span></span><br><span class="line"><span class="hljs-attr">      clientId:</span> <span class="hljs-string">bd1c0a783ccdd1c9b9e4</span></span><br><span class="line"><span class="hljs-attr">      clientSecret:</span> <span class="hljs-number">1</span><span class="hljs-string">a9030fbca47a5b2c28e92f19050bb77824b5ad1</span></span><br><span class="line"><span class="hljs-attr">      accessTokenUri:</span> <span class="hljs-attr">https://github.com/login/oauth/access_token</span></span><br><span class="line"><span class="hljs-attr">      userAuthorizationUri:</span> <span class="hljs-attr">https://github.com/login/oauth/authorize</span></span><br><span class="line"><span class="hljs-attr">      clientAuthenticationScheme:</span> <span class="hljs-string">form</span></span><br></pre></td></tr></table></figure></p>
+<p>当你尝试使用Oauth2RestTemplate的时候,包含该配置的client将会重定向到Github进行认证。如果你已经登录到了Github，你甚至不会注意到他已经经过认证。只有你的应用运行在8080端口的时候，这些指定的凭证才会工作。(在Github或其他提供程序中注册您自己的客户端应用程序以获得更大的灵活性)</p>
+<p>要限制客户端在获取访问令牌时要求的范围，可以设置security.oauth2.client.scope（逗号分隔或YAML中的数组）。 默认情况下，作用域为空，由Authorization Server决定默认值应该是什么，通常取决于它所拥有的客户端注册中的设置。</p>
+<blockquote>
+<p>security.oauth2.client.client-authentication-scheme还有一个设置，默认是“header”(但是如果像Github一样，你的OAuth2 提供者不喜欢header 认证，你需要将其设置为“form”)。实际上，security.oauth2.client.* 属性绑定到了AuthorizationCodeResourceDetails实例，因此他的所有属性都可以指定。</p>
+</blockquote>
+<blockquote>
+<p>在非web应用中你仍然可以创建一个OAuth2RestOperations，它仍然连接到security.oauth2.client.* 配置。在这种情况下，如果你使用它，它将是一个客户端凭证令牌授权(并且不再需要@EnableOAuth2Client和@EnableOAuth2SSo注解)。要组织该结构被定义，只需要从配置文件中删除security.oauth2.client.client-id 配置项(或者将值设为空字符串)</p>
+</blockquote>
+<h2 id="单点登录"><a href="#单点登录" class="headerlink" title="单点登录"></a>单点登录</h2><p>OAuth2 客户端可以用于从提供程序获取用户详细信息(如果此类功能可用)，然后将其转换成Spring Security的身份令牌验证。上面的资源服务器通过user-info-uri 属性支持者一点。这是基于OAuth2的单点登录的协议挤出，Spring Boot 通过提供@EnableOauth2Sso 注解使其易于参与。上面的Github客户端可以保护其所有资源，并使用Github /user/ endpoint进行验证，方法是添加注解并声明在哪里找到端点(除了上面已经列出的security.oauth2.client.* 配置)</p>
+<p>application.yml<br><figure class="highlight yml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attr">security:</span></span><br><span class="line"><span class="hljs-attr">  oauth2:</span></span><br><span class="line"><span class="hljs-comment"># ...</span></span><br><span class="line"><span class="hljs-attr">  resource:</span></span><br><span class="line"><span class="hljs-attr">    userInfoUri:</span> <span class="hljs-attr">https://api.github.com/user</span></span><br><span class="line"><span class="hljs-attr">    preferTokenInfo:</span> <span class="hljs-literal">false</span></span><br></pre></td></tr></table></figure></p>
+<p>由于默认所有paths都是安全的，因此没有注解可以显示给未经身份验证的用户并邀请他们登录(通过访问/login路径或security.oauth2.sso.login-path指定的路径)。</p>
+<p>自定义要保护的访问规则和路径，一遍可以添加home页面，可以将@EnableOAuth2Sso 添加到WebSecurityConfigureAdapter中，注释将使其被装饰和增强，并获得必要的部分以获取工作路径。例如，我们仅允许在“/”处对主页进行未经身份认证的访问，并保留其他所有内容的默认值。</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@Configuration</span></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WebSecurityConfiguration</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">WebSecurityConfigurerAdapter</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">configure</span><span class="hljs-params">(HttpSecurity http)</span> <span class="hljs-keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        http</span><br><span class="line">            .authorizeRequests()</span><br><span class="line">                .mvcMatchers(<span class="hljs-string">"/"</span>).permitAll()</span><br><span class="line">                .anyRequest().authenticated();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>另外请注意，由于默认请你赶快下所有endpoints都是安全的，因此这包括任何默认错误处理端点，例如端点”/error”。这意味着如果单点登录期间存在某些问题，需要重新定向到”/error”页面，这会导致身份提供程序和应用接收程序之间的无限重定向。</p>
+<p>首先，仔细考虑使端点安全，因为您可能会发现行为只是不同问题的证据。 但是，可以通过将应用程序配置为允许“/ error”来解决此问题：</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@Configuration</span></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">WebSecurityConfiguration</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">WebSecurityConfigurerAdapter</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">configure</span><span class="hljs-params">(HttpSecurity http)</span> <span class="hljs-keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        http</span><br><span class="line">            .authorizeRequests()</span><br><span class="line">                .antMatchers(<span class="hljs-string">"/error"</span>).permitAll()</span><br><span class="line">                .anyRequest().authenticated();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://docs.spring.io/spring-boot/docs/2.1.6.RELEASE/reference/htmlsingle/" target="_blank" rel="noopener">https://docs.spring.io/spring-boot/docs/2.1.6.RELEASE/reference/htmlsingle/</a></li>
+<li><a href="https://projects.spring.io/spring-security-oauth/docs/oauth2.html" target="_blank" rel="noopener">https://projects.spring.io/spring-security-oauth/docs/oauth2.html</a></li>
+<li><a href="https://docs.spring.io/spring-security-oauth2-boot/docs/2.0.0.RELEASE/reference/htmlsingle/#boot-features-security-oauth2-authorization-server" target="_blank" rel="noopener">https://docs.spring.io/spring-security-oauth2-boot/docs/2.0.0.RELEASE/reference/htmlsingle/#boot-features-security-oauth2-authorization-server</a></li>
 </ul>
 
         </div>
@@ -257,17 +303,10 @@ var _hmt = _hmt || [];
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/06/18/spring-boot-session/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Spring Boot 集成Spring Session 实现全局Session</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/05/23/docker-fills-system-volume01/">
-                <span class="level-item">记一次docker  容器把宿主机系统盘写满的事件</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/06/18/spring-boot-session/">
+                <span class="level-item">Spring Boot 集成Spring Session 实现全局Session</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -286,7 +325,7 @@ var _hmt = _hmt || [];
 <script src="https://www.wenjunjiang.win/js/gitment.js"></script>
 <script>
 	var gitment = new Gitment({
-		id: '2019/06/05/linux-batch-rename-files/',
+		id: '2019/06/21/spring-boot-oauth2/',
 		owner: 'huotaihe',
 		repo: 'huotaihe.github.io',
 		oauth: {
@@ -489,30 +528,58 @@ var _hmt = _hmt || [];
                 目录
             </h3>
             <ul class="menu-list"><li>
-        <a class="is-flex" href="#需求">
+        <a class="is-flex" href="#spring-security-oauth-简介">
         <span class="has-mr-6">1</span>
-        <span>需求</span>
+        <span>spring-security-oauth 简介</span>
         </a></li><li>
-        <a class="is-flex" href="#文件格式">
+        <a class="is-flex" href="#环境信息">
         <span class="has-mr-6">2</span>
-        <span>文件格式</span>
+        <span>环境信息</span>
         </a></li><li>
-        <a class="is-flex" href="#实现">
+        <a class="is-flex" href="#1-搭建授权服务">
         <span class="has-mr-6">3</span>
-        <span>实现</span>
-        </a></li><li>
-        <a class="is-flex" href="#Linux-实现">
-        <span class="has-mr-6">4</span>
-        <span>Linux 实现</span>
+        <span>1. 搭建授权服务</span>
         </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#mac">
-        <span class="has-mr-6">4.1</span>
-        <span>mac</span>
+        <a class="is-flex" href="#利用spring-security-oauth2-boot-自动化配置搭建">
+        <span class="has-mr-6">3.1</span>
+        <span>利用spring-security-oauth2-boot 自动化配置搭建</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#添加pom依赖">
+        <span class="has-mr-6">3.1.1</span>
+        <span>添加pom依赖</span>
         </a></li><li>
-        <a class="is-flex" href="#结果">
-        <span class="has-mr-6">4.2</span>
-        <span>结果</span>
-        </a></li></ul></li></ul>
+        <a class="is-flex" href="#在入口主类启用-EnableAuthorizationServer注解">
+        <span class="has-mr-6">3.1.2</span>
+        <span>在入口主类启用@EnableAuthorizationServer注解</span>
+        </a></li><li>
+        <a class="is-flex" href="#添加相关配置">
+        <span class="has-mr-6">3.1.3</span>
+        <span>添加相关配置</span>
+        </a></li><li>
+        <a class="is-flex" href="#启动配置oauth2-server-的springboot-工程">
+        <span class="has-mr-6">3.1.4</span>
+        <span>启动配置oauth2 server 的springboot 工程</span>
+        </a></li><li>
+        <a class="is-flex" href="#测试授权服务器">
+        <span class="has-mr-6">3.1.5</span>
+        <span>测试授权服务器</span>
+        </a></li></ul></li></ul></li><li>
+        <a class="is-flex" href="#2-搭建资源服务">
+        <span class="has-mr-6">4</span>
+        <span>2. 搭建资源服务</span>
+        </a></li><li>
+        <a class="is-flex" href="#3-搭建客户端服务">
+        <span class="has-mr-6">5</span>
+        <span>3. 搭建客户端服务</span>
+        </a></li><li>
+        <a class="is-flex" href="#单点登录">
+        <span class="has-mr-6">6</span>
+        <span>单点登录</span>
+        </a></li><li>
+        <a class="is-flex" href="#参考资料">
+        <span class="has-mr-6">7</span>
+        <span>参考资料</span>
+        </a></li></ul>
         </div>
     </div>
 </div>
@@ -823,30 +890,58 @@ var _hmt = _hmt || [];
                 目录
             </h3>
             <ul class="menu-list"><li>
-        <a class="is-flex" href="#需求">
+        <a class="is-flex" href="#spring-security-oauth-简介">
         <span class="has-mr-6">1</span>
-        <span>需求</span>
+        <span>spring-security-oauth 简介</span>
         </a></li><li>
-        <a class="is-flex" href="#文件格式">
+        <a class="is-flex" href="#环境信息">
         <span class="has-mr-6">2</span>
-        <span>文件格式</span>
+        <span>环境信息</span>
         </a></li><li>
-        <a class="is-flex" href="#实现">
+        <a class="is-flex" href="#1-搭建授权服务">
         <span class="has-mr-6">3</span>
-        <span>实现</span>
-        </a></li><li>
-        <a class="is-flex" href="#Linux-实现">
-        <span class="has-mr-6">4</span>
-        <span>Linux 实现</span>
+        <span>1. 搭建授权服务</span>
         </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#mac">
-        <span class="has-mr-6">4.1</span>
-        <span>mac</span>
+        <a class="is-flex" href="#利用spring-security-oauth2-boot-自动化配置搭建">
+        <span class="has-mr-6">3.1</span>
+        <span>利用spring-security-oauth2-boot 自动化配置搭建</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#添加pom依赖">
+        <span class="has-mr-6">3.1.1</span>
+        <span>添加pom依赖</span>
         </a></li><li>
-        <a class="is-flex" href="#结果">
-        <span class="has-mr-6">4.2</span>
-        <span>结果</span>
-        </a></li></ul></li></ul>
+        <a class="is-flex" href="#在入口主类启用-EnableAuthorizationServer注解">
+        <span class="has-mr-6">3.1.2</span>
+        <span>在入口主类启用@EnableAuthorizationServer注解</span>
+        </a></li><li>
+        <a class="is-flex" href="#添加相关配置">
+        <span class="has-mr-6">3.1.3</span>
+        <span>添加相关配置</span>
+        </a></li><li>
+        <a class="is-flex" href="#启动配置oauth2-server-的springboot-工程">
+        <span class="has-mr-6">3.1.4</span>
+        <span>启动配置oauth2 server 的springboot 工程</span>
+        </a></li><li>
+        <a class="is-flex" href="#测试授权服务器">
+        <span class="has-mr-6">3.1.5</span>
+        <span>测试授权服务器</span>
+        </a></li></ul></li></ul></li><li>
+        <a class="is-flex" href="#2-搭建资源服务">
+        <span class="has-mr-6">4</span>
+        <span>2. 搭建资源服务</span>
+        </a></li><li>
+        <a class="is-flex" href="#3-搭建客户端服务">
+        <span class="has-mr-6">5</span>
+        <span>3. 搭建客户端服务</span>
+        </a></li><li>
+        <a class="is-flex" href="#单点登录">
+        <span class="has-mr-6">6</span>
+        <span>单点登录</span>
+        </a></li><li>
+        <a class="is-flex" href="#参考资料">
+        <span class="has-mr-6">7</span>
+        <span>参考资料</span>
+        </a></li></ul>
         </div>
     </div>
 </div>
