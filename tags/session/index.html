@@ -2,7 +2,7 @@
 <html  lang="zh">
 <head>
     <meta charset="utf-8">
-<title>标签: Shell - 白马度和|Huotaihe</title>
+<title>标签: session - 白马度和|Huotaihe</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
 
@@ -11,7 +11,7 @@
 <meta name="keywords" content="和太贺 白马度和 spring boot cloud">
 <meta property="og:type" content="website">
 <meta property="og:title" content="白马度和|Huotaihe">
-<meta property="og:url" content="http://blog.huotaihe.com/tags/Shell/index.html">
+<meta property="og:url" content="http://blog.huotaihe.com/tags/session/index.html">
 <meta property="og:site_name" content="白马度和|Huotaihe">
 <meta property="og:description" content="和太贺的个人技术博客">
 <meta property="og:locale" content="zh-CN">
@@ -152,7 +152,7 @@ var _hmt = _hmt || [];
         <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
             <li><a href="/tags">标签</a></li>
-            <li class="is-active"><a href="#" aria-current="page">Shell</a></li>
+            <li class="is-active"><a href="#" aria-current="page">session</a></li>
         </ul>
         </nav>
     </div>
@@ -164,17 +164,17 @@ var _hmt = _hmt || [];
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-20T11:58:58.142Z">2018-12-20</time>
+                <time class="level-item has-text-grey" datetime="2019-06-18T03:11:00.000Z">2019-06-18</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Linux-常用命令手册/">Linux 常用命令手册</a>
+                <a class="has-link-grey -link" href="/categories/Spring/">Spring</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Spring/深入spring-boot/">深入spring boot</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 352 个字)
+                    5 分钟 读完 (大约 775 个字)
                 </span>
                 
             </div>
@@ -182,77 +182,22 @@ var _hmt = _hmt || [];
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/12/20/linux-common-command-manual-md/">Linux 常用命令手册</a>
+                <a class="has-link-black-ter" href="/2019/06/18/spring-boot-session/">Spring Boot 集成Spring Session 实现全局Session</a>
             
         </h1>
         <div class="content">
-            <p>收集工作中常用到的Linux 命令；<br>只收集不易记忆的，常用的不在罗列都在脑子里。</p>
-<h2 id="目录管理"><a href="#目录管理" class="headerlink" title="目录管理"></a>目录管理</h2><h3 id="查看当前目录总共占的容量，而不单独列出各子项占用的容量"><a href="#查看当前目录总共占的容量，而不单独列出各子项占用的容量" class="headerlink" title="查看当前目录总共占的容量，而不单独列出各子项占用的容量"></a>查看当前目录总共占的容量，而不单独列出各子项占用的容量</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du -sh</span><br></pre></td></tr></table></figure>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/12/20/linux-common-command-manual-md/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-13T05:53:24.000Z">2018-12-13</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Linux-常用命令手册/">Linux 常用命令手册</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分钟 读完 (大约 189 个字)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/12/13/linux-common-command-manual-01/">Linux下在一行执行多条命令</a>
-            
-        </h1>
-        <div class="content">
-            <p>要实现在一行执行多条Linux命令，分三种情况：</p>
-<ol>
-<li>&amp;&amp;</li>
-</ol>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g</span><br></pre></td></tr></table></figure>
+            <h2 id="Spring-Session-简介"><a href="#Spring-Session-简介" class="headerlink" title="Spring Session 简介"></a>Spring Session 简介</h2><p>Spring Session 为管理用户Session 信息提供了API和实现</p>
 <blockquote>
-<p>第2条命令只有在第1条命令成功执行之后才执行。当&amp;&amp;前的命令“hexo clean”成功执行后”hexo g”才执行，根据命令产生的退出码判断是否执行成功（0成功，非0失败）。</p>
+<p>Spring Session provides an API and implementations for managing a user’s session information.</p>
 </blockquote>
+<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>  Spring Session 使应用支持集群回话变得更容易，而且不需要依赖于特定应用容器的解决方案。还提供如下透明集成：<br></p>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/12/13/linux-common-command-manual-01/#more">阅读更多</a>
+                <a class="button is-size-7 is-light" href="/2019/06/18/spring-boot-session/#more">阅读更多</a>
                 </div>
             </div>
         </div>
