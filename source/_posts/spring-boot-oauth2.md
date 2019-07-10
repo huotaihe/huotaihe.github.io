@@ -2,9 +2,11 @@
 title: Spring Boot 搭建Oauth2 认证系统
 toc: true
 categories:
-  - temp
+  - [Spring, 深入spring boot]
 tags:
-  - temp
+    - Spring 
+    - Springboot 
+    - oauth2
 date: 2019-06-21 14:44:51
 updated: 2019-06-21 14:44:51
 ---
