@@ -31,6 +31,10 @@ vim .git/confiG
 ```bash
 git branch -vv
 ```
+### 查看当前使用的分支号
+```bash
+git symbolic-ref --short -q HEAD
+```
 <!-- more -->
 ### 把本地分支与远程origin的分支进行关联处理
 
