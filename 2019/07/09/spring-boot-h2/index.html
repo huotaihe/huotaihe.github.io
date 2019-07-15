@@ -2,22 +2,26 @@
 <html  lang="zh">
 <head>
     <meta charset="utf-8">
-<title>标签: Manual - 白马度和|Huotaihe</title>
+<title>Spring Boot 快速集成H2 内存数据库 - 白马度和|Huotaihe</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
 
 
-    <meta name="description" content="和太贺的个人技术博客">
-<meta name="keywords" content="和太贺 白马度和 spring boot cloud">
-<meta property="og:type" content="website">
-<meta property="og:title" content="白马度和|Huotaihe">
-<meta property="og:url" content="http://blog.huotaihe.com/tags/Manual/index.html">
+    <meta name="description" content="Spring Boot 为嵌入式Java数据库引擎提供了自动化配置支持，目前提供了对HSQL，H2和Derby的支持，当然我们也通过可扩展API来支持新的嵌入式数据库类型和DataSource实现。 为什么使用嵌入式内存数据库嵌入式数据库在项目的开发阶段非常有用，因为它具有轻量级特性。 优点包括易于配置，快速启动时间，可测试性以及在开发过程中快速开发SQL的能力。但是它不提供数据持久化，我们需要在">
+<meta name="keywords" content="temp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring Boot 快速集成H2 内存数据库">
+<meta property="og:url" content="http://blog.huotaihe.com/2019/07/09/spring-boot-h2/index.html">
 <meta property="og:site_name" content="白马度和|Huotaihe">
-<meta property="og:description" content="和太贺的个人技术博客">
+<meta property="og:description" content="Spring Boot 为嵌入式Java数据库引擎提供了自动化配置支持，目前提供了对HSQL，H2和Derby的支持，当然我们也通过可扩展API来支持新的嵌入式数据库类型和DataSource实现。 为什么使用嵌入式内存数据库嵌入式数据库在项目的开发阶段非常有用，因为它具有轻量级特性。 优点包括易于配置，快速启动时间，可测试性以及在开发过程中快速开发SQL的能力。但是它不提供数据持久化，我们需要在">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://images.huotaihe.com/2019-07-15-17-15-50.png">
+<meta property="og:image" content="http://images.huotaihe.com/2019-07-15-17-17-48.png">
+<meta property="og:updated_time" content="2019-07-09T09:47:01.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="白马度和|Huotaihe">
-<meta name="twitter:description" content="和太贺的个人技术博客">
+<meta name="twitter:title" content="Spring Boot 快速集成H2 内存数据库">
+<meta name="twitter:description" content="Spring Boot 为嵌入式Java数据库引擎提供了自动化配置支持，目前提供了对HSQL，H2和Derby的支持，当然我们也通过可扩展API来支持新的嵌入式数据库类型和DataSource实现。 为什么使用嵌入式内存数据库嵌入式数据库在项目的开发阶段非常有用，因为它具有轻量级特性。 优点包括易于配置，快速启动时间，可测试性以及在开发过程中快速开发SQL的能力。但是它不提供数据持久化，我们需要在">
+<meta name="twitter:image" content="http://images.huotaihe.com/2019-07-15-17-15-50.png">
 
 
 
@@ -134,6 +138,10 @@ var _hmt = _hmt || [];
                     
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -148,33 +156,22 @@ var _hmt = _hmt || [];
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/tags">标签</a></li>
-            <li class="is-active"><a href="#" aria-current="page">Manual</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-20T11:58:58.142Z">2018-12-20</time>
+                <time class="level-item has-text-grey" datetime="2019-07-09T09:47:01.000Z">2019-07-09</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Linux-常用命令手册/">Linux 常用命令手册</a>
+                <a class="has-link-grey -link" href="/categories/temp/">temp</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 352 个字)
+                    7 分钟 读完 (大约 1032 个字)
                 </span>
                 
             </div>
@@ -182,92 +179,153 @@ var _hmt = _hmt || [];
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2018/12/20/linux-common-command-manual-md/">Linux 常用命令手册</a>
+                Spring Boot 快速集成H2 内存数据库
             
         </h1>
         <div class="content">
-            <p>收集工作中常用到的Linux 命令；<br>只收集不易记忆的，常用的不在罗列都在脑子里。</p>
-<h2 id="目录管理"><a href="#目录管理" class="headerlink" title="目录管理"></a>目录管理</h2><h3 id="查看当前目录总共占的容量，而不单独列出各子项占用的容量"><a href="#查看当前目录总共占的容量，而不单独列出各子项占用的容量" class="headerlink" title="查看当前目录总共占的容量，而不单独列出各子项占用的容量"></a>查看当前目录总共占的容量，而不单独列出各子项占用的容量</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du -sh</span><br></pre></td></tr></table></figure>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/12/20/linux-common-command-manual-md/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-13T05:53:24.000Z">2018-12-13</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Linux-常用命令手册/">Linux 常用命令手册</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    1 分钟 读完 (大约 189 个字)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/12/13/linux-common-command-manual-01/">Linux下在一行执行多条命令</a>
-            
-        </h1>
-        <div class="content">
-            <p>要实现在一行执行多条Linux命令，分三种情况：</p>
-<ol>
-<li>&amp;&amp;</li>
-</ol>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g</span><br></pre></td></tr></table></figure>
+            <p>Spring Boot 为嵌入式Java数据库引擎提供了自动化配置支持，目前提供了对HSQL，H2和Derby的支持，当然我们也通过可扩展API来支持新的嵌入式数据库类型和DataSource实现。</p>
+<h2 id="为什么使用嵌入式内存数据库"><a href="#为什么使用嵌入式内存数据库" class="headerlink" title="为什么使用嵌入式内存数据库"></a>为什么使用嵌入式内存数据库</h2><p>嵌入式数据库在项目的开发阶段非常有用，因为它具有轻量级特性。 优点包括易于配置，快速启动时间，可测试性以及在开发过程中快速开发SQL的能力。但是它不提供数据持久化，我们需要在应用启动的时候通过SQL来初始化数据库，在应用程序结束的时候运行时生成的数据会被丢弃</p>
+<a id="more"></a>
+<h2 id="关于DB2"><a href="#关于DB2" class="headerlink" title="关于DB2"></a>关于DB2</h2><p>H2是个基于JAVA编写的轻量级关系型数据库。具有以下特点：</p>
+<ul>
+<li>快速、开源、基于JDBC API</li>
+<li>支持嵌入和独立服务器两种模式；内存型数据库</li>
+<li>提供了网页管理控制台</li>
+<li>体量小，jar包值有2MB大小</li>
+</ul>
+<h2 id="使用Spring-Boot-集成H2"><a href="#使用Spring-Boot-集成H2" class="headerlink" title="使用Spring Boot 集成H2"></a>使用Spring Boot 集成H2</h2><p>Spring Boot 为H2提供了自动化配置，集成起来非常方便。我们不需要提供任何的连接URL信息，我们只需要简单的在环境变量里面(或POM文件)引入H2的jar包即可。</p>
+<h3 id="pom-依赖"><a href="#pom-依赖" class="headerlink" title="pom 依赖"></a>pom 依赖</h3><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-jdbc<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.h2database<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>h2<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>runtime<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line"><span class="hljs-comment">&lt;!-- devtools 和 web 非必要 演示console的时候用到 --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-devtools<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>runtime<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">optional</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">optional</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="打印数据源信息"><a href="#打印数据源信息" class="headerlink" title="打印数据源信息"></a>打印数据源信息</h3><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> lombok.extern.slf4j.Slf4j;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.boot.CommandLineRunner;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">import</span> javax.sql.DataSource;</span><br><span class="line"><span class="hljs-keyword">import</span> java.sql.Connection;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@Component</span></span><br><span class="line"><span class="hljs-meta">@Slf</span>4j</span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DataSourceInfo</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">CommandLineRunner</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Autowired</span></span><br><span class="line">    <span class="hljs-keyword">private</span> DataSource dataSource;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">(String... args)</span> <span class="hljs-keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        Connection connection = dataSource.getConnection();</span><br><span class="line">        log.info(<span class="hljs-string">"Connection info: "</span> + connection.toString());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="初始化sql"><a href="#初始化sql" class="headerlink" title="初始化sql"></a>初始化sql</h3><p>src/main/resources/schema.sql<br><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> <span class="hljs-string">`t`</span>(<span class="hljs-string">`id`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">11</span>) <span class="hljs-keyword">not</span> <span class="hljs-literal">null</span> AUTO_INCREMENT, <span class="hljs-string">`c`</span> <span class="hljs-built_in">int</span> (<span class="hljs-number">11</span>) <span class="hljs-keyword">default</span> <span class="hljs-literal">null</span>, <span class="hljs-string">`d`</span> <span class="hljs-built_in">int</span>(<span class="hljs-number">11</span>) <span class="hljs-keyword">default</span> <span class="hljs-literal">null</span>, primary <span class="hljs-keyword">key</span> (<span class="hljs-string">`id`</span>));</span><br></pre></td></tr></table></figure></p>
+<p>src/main/resources/data.sql<br><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> <span class="hljs-string">`t`</span> (<span class="hljs-string">`c`</span>, <span class="hljs-string">`d`</span>) <span class="hljs-keyword">VALUES</span> (<span class="hljs-number">1</span>, <span class="hljs-number">1</span>);</span><br></pre></td></tr></table></figure></p>
+<h3 id="数据源信息"><a href="#数据源信息" class="headerlink" title="数据源信息"></a>数据源信息</h3><p>从日志中看到到Spring Boot 为H2自动配置的数据源信息为：</p>
+<ul>
+<li>url: jdbc:h2:mem:testdb </li>
+<li>user: SA</li>
+<li>password: &lt;空&gt;</li>
+</ul>
+<h3 id="登录控H2制台"><a href="#登录控H2制台" class="headerlink" title="登录控H2制台"></a>登录控H2制台</h3><p>用浏览器打开网址：<a href="http://127.0.0.1:8080/h2-console" target="_blank" rel="noopener">http://127.0.0.1:8080/h2-console</a><br>输入数据源信息并登录<br><img src="http://images.huotaihe.com/2019-07-15-17-15-50.png" alt=""><br>可以看到初始化过得数据源信息：<br><img src="http://images.huotaihe.com/2019-07-15-17-17-48.png" alt=""></p>
+<h2 id="关于H2-Web-Console-说明"><a href="#关于H2-Web-Console-说明" class="headerlink" title="关于H2 Web Console 说明"></a>关于H2 Web Console 说明</h2><p>H2 提供了基于浏览器的web控制台，而且Spring Boot 对其进行了自动化配置。当满足一下条件时web控制台才会自动化配置：</p>
+<ul>
+<li>你的工程师一个基于Servlet 的web应用</li>
+<li>com.h2database:h2 在环境变量里</li>
+<li>你正在使用Spring Boot 的devtools 开发者工具</li>
+</ul>
 <blockquote>
-<p>第2条命令只有在第1条命令成功执行之后才执行。当&amp;&amp;前的命令“hexo clean”成功执行后”hexo g”才执行，根据命令产生的退出码判断是否执行成功（0成功，非0失败）。</p>
+<p>如果你没有使用Spring Boot的开发者工具的时候，仍然想要使用Web console， 我们可以通过修改配置项spring.h2.console.enabled为true来启用它</p>
 </blockquote>
+<blockquote>
+<p>H2 Web 控制台只适合在开发阶段使用，生产环境应通过设置spring.h2.console.enabled配置项为false来禁用该功能</p>
+</blockquote>
+<h3 id="修改Web-控制台的URI"><a href="#修改Web-控制台的URI" class="headerlink" title="修改Web 控制台的URI"></a>修改Web 控制台的URI</h3><p>H2 的Web 控制台的默认路径是：/h2-console，我们可以通过application.properties(或者application.yml) 的配置项spring.h2.console.path 来修改路径。</p>
+<h2 id="关于初始化DB-脚本的说明"><a href="#关于初始化DB-脚本的说明" class="headerlink" title="关于初始化DB 脚本的说明"></a>关于初始化DB 脚本的说明</h2><p>Spring Boot 可以自动的创建表结构，并对表数据进行初始化。Spring Boot 从环境变量根路径下分别加载schema.sql 和 data.sql文件，来完成数据源的填充。其中schema.sql 中为dml脚本，data.sql 中为ddl脚本。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><h2 id="我们将在下一篇文章通过源代码讲解Spring-Boot-是怎么完成H2的自动化配置的"><a href="#我们将在下一篇文章通过源代码讲解Spring-Boot-是怎么完成H2的自动化配置的" class="headerlink" title="我们将在下一篇文章通过源代码讲解Spring Boot 是怎么完成H2的自动化配置的"></a>我们将在下一篇文章通过源代码讲解Spring Boot 是怎么完成H2的自动化配置的</h2><p>工程源码：</p>
+<ul>
+<li>github： <a href="https://github.com/huotaihe/spring-boot-learn/tree/master/spring-redis-h2" target="_blank" rel="noopener">https://github.com/huotaihe/spring-boot-learn/tree/master/spring-redis-h2</a></li>
+</ul>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="https://docs.spring.io/spring-boot/docs/2.1.6.RELEASE/reference/html/boot-features-sql.html#boot-features-sql-h2-console" target="_blank" rel="noopener">https://docs.spring.io/spring-boot/docs/2.1.6.RELEASE/reference/html/boot-features-sql.html#boot-features-sql-h2-console</a></li>
+<li><a href="https://docs.spring.io/spring/docs/5.1.8.RELEASE/spring-framework-reference/data-access.html#jdbc-embedded-database-support" target="_blank" rel="noopener">https://docs.spring.io/spring/docs/5.1.8.RELEASE/spring-framework-reference/data-access.html#jdbc-embedded-database-support</a></li>
+<li><a href="https://docs.spring.io/spring-boot/docs/2.1.6.RELEASE/reference/html/howto-database-initialization.html" target="_blank" rel="noopener">https://docs.spring.io/spring-boot/docs/2.1.6.RELEASE/reference/html/howto-database-initialization.html</a></li>
+</ul>
+
         </div>
         
-        
-        <div class="level is-mobile">
+        <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/12/13/linux-common-command-manual-01/#more">阅读更多</a>
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/temp/">temp</a>
                 </div>
             </div>
         </div>
         
+        
+        
+        <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+</div>
+<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
         
     </div>
 </div>
 
 
 
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="http://images.huotaihe.com/alipay.png" alt="支付宝"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="http://images.huotaihe.com/wechatpay.png" alt="微信"></div>
+</a>
+
+                
+        </div>
+    </div>
+</div>
 
 
 
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/06/21/spring-boot-oauth2/">
+                <span class="level-item">Spring Boot 搭建Oauth2 认证系统</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="comment-container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://www.wenjunjiang.win/js/gitment.js"></script>
+<script>
+	var gitment = new Gitment({
+		id: '2019/07/09/spring-boot-h2/',
+		owner: 'huotaihe',
+		repo: 'huotaihe.github.io',
+		oauth: {
+			client_id: '67d4fdced7522e210c75',
+			client_secret: '1539dd9d89d920309cce0c5f45510d7af4607acb',
+		},
+	})
+	gitment.render('comment-container')
+</script>
+
+    </div>
+</div>
 </div>
                 
 
@@ -451,6 +509,73 @@ var _hmt = _hmt || [];
         <div class="column-right-shadow is-hidden-widescreen ">
         
             
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#为什么使用嵌入式内存数据库">
+        <span class="has-mr-6">1</span>
+        <span>为什么使用嵌入式内存数据库</span>
+        </a></li><li>
+        <a class="is-flex" href="#关于DB2">
+        <span class="has-mr-6">2</span>
+        <span>关于DB2</span>
+        </a></li><li>
+        <a class="is-flex" href="#使用Spring-Boot-集成H2">
+        <span class="has-mr-6">3</span>
+        <span>使用Spring Boot 集成H2</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#pom-依赖">
+        <span class="has-mr-6">3.1</span>
+        <span>pom 依赖</span>
+        </a></li><li>
+        <a class="is-flex" href="#打印数据源信息">
+        <span class="has-mr-6">3.2</span>
+        <span>打印数据源信息</span>
+        </a></li><li>
+        <a class="is-flex" href="#初始化sql">
+        <span class="has-mr-6">3.3</span>
+        <span>初始化sql</span>
+        </a></li><li>
+        <a class="is-flex" href="#数据源信息">
+        <span class="has-mr-6">3.4</span>
+        <span>数据源信息</span>
+        </a></li><li>
+        <a class="is-flex" href="#登录控H2制台">
+        <span class="has-mr-6">3.5</span>
+        <span>登录控H2制台</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#关于H2-Web-Console-说明">
+        <span class="has-mr-6">4</span>
+        <span>关于H2 Web Console 说明</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#修改Web-控制台的URI">
+        <span class="has-mr-6">4.1</span>
+        <span>修改Web 控制台的URI</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#关于初始化DB-脚本的说明">
+        <span class="has-mr-6">5</span>
+        <span>关于初始化DB 脚本的说明</span>
+        </a></li><li>
+        <a class="is-flex" href="#结语">
+        <span class="has-mr-6">6</span>
+        <span>结语</span>
+        </a></li><li>
+        <a class="is-flex" href="#我们将在下一篇文章通过源代码讲解Spring-Boot-是怎么完成H2的自动化配置的">
+        <span class="has-mr-6">7</span>
+        <span>我们将在下一篇文章通过源代码讲解Spring Boot 是怎么完成H2的自动化配置的</span>
+        </a></li><li>
+        <a class="is-flex" href="#参考资料">
+        <span class="has-mr-6">8</span>
+        <span>参考资料</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
         
             
 <div class="card widget">
@@ -783,6 +908,73 @@ var _hmt = _hmt || [];
 <div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
     
         
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#为什么使用嵌入式内存数据库">
+        <span class="has-mr-6">1</span>
+        <span>为什么使用嵌入式内存数据库</span>
+        </a></li><li>
+        <a class="is-flex" href="#关于DB2">
+        <span class="has-mr-6">2</span>
+        <span>关于DB2</span>
+        </a></li><li>
+        <a class="is-flex" href="#使用Spring-Boot-集成H2">
+        <span class="has-mr-6">3</span>
+        <span>使用Spring Boot 集成H2</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#pom-依赖">
+        <span class="has-mr-6">3.1</span>
+        <span>pom 依赖</span>
+        </a></li><li>
+        <a class="is-flex" href="#打印数据源信息">
+        <span class="has-mr-6">3.2</span>
+        <span>打印数据源信息</span>
+        </a></li><li>
+        <a class="is-flex" href="#初始化sql">
+        <span class="has-mr-6">3.3</span>
+        <span>初始化sql</span>
+        </a></li><li>
+        <a class="is-flex" href="#数据源信息">
+        <span class="has-mr-6">3.4</span>
+        <span>数据源信息</span>
+        </a></li><li>
+        <a class="is-flex" href="#登录控H2制台">
+        <span class="has-mr-6">3.5</span>
+        <span>登录控H2制台</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#关于H2-Web-Console-说明">
+        <span class="has-mr-6">4</span>
+        <span>关于H2 Web Console 说明</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#修改Web-控制台的URI">
+        <span class="has-mr-6">4.1</span>
+        <span>修改Web 控制台的URI</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#关于初始化DB-脚本的说明">
+        <span class="has-mr-6">5</span>
+        <span>关于初始化DB 脚本的说明</span>
+        </a></li><li>
+        <a class="is-flex" href="#结语">
+        <span class="has-mr-6">6</span>
+        <span>结语</span>
+        </a></li><li>
+        <a class="is-flex" href="#我们将在下一篇文章通过源代码讲解Spring-Boot-是怎么完成H2的自动化配置的">
+        <span class="has-mr-6">7</span>
+        <span>我们将在下一篇文章通过源代码讲解Spring Boot 是怎么完成H2的自动化配置的</span>
+        </a></li><li>
+        <a class="is-flex" href="#参考资料">
+        <span class="has-mr-6">8</span>
+        <span>参考资料</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
     
         
 <div class="card widget">
