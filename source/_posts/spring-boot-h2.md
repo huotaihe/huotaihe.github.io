@@ -2,9 +2,11 @@
 title: Spring Boot 快速集成H2 内存数据库
 toc: true
 categories:
-  - temp
+  - [Spring, 深入spring boot]
 tags:
-  - temp
+    - Spring 
+    - Springboot 
+    - H2 
 date: 2019-07-09 17:47:01
 updated: 2019-07-09 17:47:01
 ---
