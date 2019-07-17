@@ -2,22 +2,23 @@
 <html  lang="zh">
 <head>
     <meta charset="utf-8">
-<title>标签: Springboot - 白马度和|Huotaihe</title>
+<title>［Spring Boot］ 搭建源码调试环境 - 白马度和|Huotaihe</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
 
 
-    <meta name="description" content="和太贺的个人技术博客">
-<meta name="keywords" content="和太贺 白马度和 spring boot cloud">
-<meta property="og:type" content="website">
-<meta property="og:title" content="白马度和|Huotaihe">
-<meta property="og:url" content="http://blog.huotaihe.com/tags/Springboot/index.html">
+    <meta name="description" content="读源码是成长最快的学习方法。  这篇文件主要讲述了怎么在本地搭建Spring Boot 源码的调试环境">
+<meta name="keywords" content="temp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="［Spring Boot］ 搭建源码调试环境">
+<meta property="og:url" content="http://blog.huotaihe.com/2019/07/16/spring-boot-source-environment/index.html">
 <meta property="og:site_name" content="白马度和|Huotaihe">
-<meta property="og:description" content="和太贺的个人技术博客">
+<meta property="og:description" content="读源码是成长最快的学习方法。  这篇文件主要讲述了怎么在本地搭建Spring Boot 源码的调试环境">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-07-16T08:32:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="白马度和|Huotaihe">
-<meta name="twitter:description" content="和太贺的个人技术博客">
+<meta name="twitter:title" content="［Spring Boot］ 搭建源码调试环境">
+<meta name="twitter:description" content="读源码是成长最快的学习方法。  这篇文件主要讲述了怎么在本地搭建Spring Boot 源码的调试环境">
 
 
 
@@ -134,6 +135,10 @@ var _hmt = _hmt || [];
                     
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -148,33 +153,22 @@ var _hmt = _hmt || [];
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/tags">标签</a></li>
-            <li class="is-active"><a href="#" aria-current="page">Springboot</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-09T09:47:01.000Z">2019-07-09</time>
+                <time class="level-item has-text-grey" datetime="2019-07-16T08:32:53.000Z">2019-07-16</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Spring/">Spring</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Spring/深入spring-boot/">深入spring boot</a>
+                <a class="has-link-grey -link" href="/categories/temp/">temp</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    7 分钟 读完 (大约 1032 个字)
+                    4 分钟 读完 (大约 541 个字)
                 </span>
                 
             </div>
@@ -182,247 +176,143 @@ var _hmt = _hmt || [];
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/07/09/spring-boot-h2/">Spring Boot 快速集成H2 内存数据库</a>
+                ［Spring Boot］ 搭建源码调试环境
             
         </h1>
         <div class="content">
-            <p>Spring Boot 为嵌入式Java数据库引擎提供了自动化配置支持，目前提供了对HSQL，H2和Derby的支持，当然我们也通过可扩展API来支持新的嵌入式数据库类型和DataSource实现。</p>
-<h2 id="为什么使用嵌入式内存数据库"><a href="#为什么使用嵌入式内存数据库" class="headerlink" title="为什么使用嵌入式内存数据库"></a>为什么使用嵌入式内存数据库</h2><p>嵌入式数据库在项目的开发阶段非常有用，因为它具有轻量级特性。 优点包括易于配置，快速启动时间，可测试性以及在开发过程中快速开发SQL的能力。但是它不提供数据持久化，我们需要在应用启动的时候通过SQL来初始化数据库，在应用程序结束的时候运行时生成的数据会被丢弃</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/07/09/spring-boot-h2/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-21T06:44:51.000Z">2019-06-21</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Spring/">Spring</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Spring/深入spring-boot/">深入spring boot</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    18 分钟 读完 (大约 2649 个字)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/06/21/spring-boot-oauth2/">Spring Boot 搭建Oauth2 认证系统</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="spring-security-oauth-简介"><a href="#spring-security-oauth-简介" class="headerlink" title="spring-security-oauth 简介"></a>spring-security-oauth 简介</h2><p>OAuth2是一种广泛使用的授权框架。</p>
-<p>Spring Security OAuth 提供了OAuth的实现，为OAuth 的提供者和消费者提供了支持，并且支持OAuth1和OAth2.0。</p>
-<p>在学习spring security oauth 之前，需要掌握并理解OAuth，并且理解它解决了哪些应用场景，不了的话可以阅读它的<a href="https://oauth.net/" target="_blank" rel="noopener">官方文档</a>；同时开发者也需要书序Spring和Spring Security 的工作原理。<br></p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/06/21/spring-boot-oauth2/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-18T03:11:00.000Z">2019-06-18</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Spring/">Spring</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Spring/深入spring-boot/">深入spring boot</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    5 分钟 读完 (大约 775 个字)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/06/18/spring-boot-session/">Spring Boot 集成Spring Session 实现全局Session</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="Spring-Session-简介"><a href="#Spring-Session-简介" class="headerlink" title="Spring Session 简介"></a>Spring Session 简介</h2><p>Spring Session 为管理用户Session 信息提供了API和实现</p>
+            <p><strong><center><font size="6">读源码是成长最快的学习方法。</font></center></strong></p>
 <blockquote>
-<p>Spring Session provides an API and implementations for managing a user’s session information.</p>
+<p>这篇文件主要讲述了怎么在本地搭建Spring Boot 源码的调试环境<br><a id="more"></a></p>
 </blockquote>
-<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>  Spring Session 使应用支持集群回话变得更容易，而且不需要依赖于特定应用容器的解决方案。还提供如下透明集成：<br></p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/06/18/spring-boot-session/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-18T02:14:49.000Z">2018-12-18</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Spring/">Spring</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Spring/深入spring-boot/">深入spring boot</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    几秒 读完 (大约 78 个字)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/12/18/springboot-skip-test/">springboot 打包时跳过单元测试</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="通过修改pom-xml"><a href="#通过修改pom-xml" class="headerlink" title="通过修改pom.xml"></a>通过修改pom.xml</h2><blockquote>
-<p>在项目的pom.xml 文件的 &lt;properties&gt; 节点中增加如下节点<br><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">&lt;!-- maven方式跳过maven test, 等同 mvn package -Dmaven.test.skip=true --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">maven.test.skip</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">maven.test.skip</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="环境信息"><a href="#环境信息" class="headerlink" title="环境信息"></a>环境信息</h2><ul>
+<li>macOS Mojave 10.14.5</li>
+<li>jkd1.8+</li>
+<li>maven 3.5.2</li>
+<li>Idea 2019.1.2</li>
+</ul>
+<h2 id="事先准备"><a href="#事先准备" class="headerlink" title="事先准备"></a>事先准备</h2><h3 id="增加idea内存"><a href="#增加idea内存" class="headerlink" title="增加idea内存"></a>增加idea内存</h3><p>Intellij IDEA 的默认Xmx是750， 由于Spring Boot 源码非常庞大，经常会导致IDEA内存溢出，所以我事先将IDEA的Xmx 内存调整为2048m。<br>IDEA<br>IDEA内存调整方法见文章：<a href="https://blog.csdn.net/qq_27093465/article/details/81947933" target="_blank" rel="noopener">https://blog.csdn.net/qq_27093465/article/details/81947933</a></p>
+<h3 id="增加maven内存"><a href="#增加maven内存" class="headerlink" title="增加maven内存"></a>增加maven内存</h3><p>添加环境变量“MAVEN_OPT=-Xmx512m” </p>
+<p>修改方法请自行Google</p>
+<h2 id="源码拉取"><a href="#源码拉取" class="headerlink" title="源码拉取"></a>源码拉取</h2><h3 id="fork-官网仓库到自己的空间"><a href="#fork-官网仓库到自己的空间" class="headerlink" title="fork 官网仓库到自己的空间"></a>fork 官网仓库到自己的空间</h3><p>方便保存注释</p>
+<h3 id="clone-源码到本地磁盘"><a href="#clone-源码到本地磁盘" class="headerlink" title="clone 源码到本地磁盘"></a>clone 源码到本地磁盘</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">## 请自行替换你自己的仓库地址</span></span><br><span class="line">git <span class="hljs-built_in">clone</span> git@github.com:huotaihe/spring-boot.git</span><br></pre></td></tr></table></figure>
+<h3 id="查看最新稳定tag"><a href="#查看最新稳定tag" class="headerlink" title="查看最新稳定tag"></a>查看最新稳定tag</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">## 执行命令</span></span><br><span class="line">git tag |sort -r</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">## 输出结果如下</span></span><br><span class="line">v2.2.0.M4</span><br><span class="line">v2.2.0.M3</span><br><span class="line">v2.2.0.M2</span><br><span class="line">v2.2.0.M1</span><br><span class="line">v2.1.6.RELEASE <span class="hljs-comment">## 当前发行版本</span></span><br><span class="line">v2.1.5.RELEASE</span><br><span class="line">v2.1.4.RELEASE</span><br><span class="line">v2.1.3.RELEASE</span><br><span class="line">v2.1.2.RELEASE</span><br><span class="line">v2.1.1.RELEASE</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<h3 id="checkout-当前发行版本"><a href="#checkout-当前发行版本" class="headerlink" title="checkout 当前发行版本"></a>checkout 当前发行版本</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b 2.1.6.RELEASE v2.1.6.RELEASE</span><br></pre></td></tr></table></figure>
+<h2 id="构建源码"><a href="#构建源码" class="headerlink" title="构建源码"></a>构建源码</h2><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mvnw clean install -e -DskipTests</span><br></pre></td></tr></table></figure>
+<p>本步骤非必要，但是提前构建效率更高，不然后面导入源码到IDEA或下载依赖，需要很长时间。</p>
+<h2 id="将源码导入IDEA"><a href="#将源码导入IDEA" class="headerlink" title="将源码导入IDEA"></a>将源码导入IDEA</h2><p>通过菜单</p>
+<blockquote>
+<p>File &gt; Open</p>
 </blockquote>
+<p>打开源码目录，IDEA会开始构建工程结构（时间会比较长）</p>
+<h3 id="检验源码工程构建结果"><a href="#检验源码工程构建结果" class="headerlink" title="检验源码工程构建结果"></a>检验源码工程构建结果</h3><p>等源码导入完成构建完成后，执行菜单</p>
+<blockquote>
+<p>Build &gt; Build Project</p>
+</blockquote>
+<p>构建工程源码，如果没有报错信息<br>恭喜你已经成功搭建了源码调试环境</p>
+<h3 id="异常问题解决"><a href="#异常问题解决" class="headerlink" title="异常问题解决"></a>异常问题解决</h3><p>现实总是残酷的，编译工程往往会报一些类解析不到。<br>这是因为一些module的工程结构idea解析的不正确。<br>解决方法:<br>  找到对应module，在module的pom.xml文件上执行右键菜单命令</p>
+<blockquote>
+<p>Maven &gt; reimport<br>  idea 会重现构建module的工程结构</p>
+</blockquote>
+<p>  安全起见可以把每个module都遍历一下</p>
+<h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><p>运行spring-boot-hibernate52-tests 如果启动成功<br>说明环境已经搭建成功了</p>
+
         </div>
         
-        
-        <div class="level is-mobile">
+        <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/12/18/springboot-skip-test/#more">阅读更多</a>
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/temp/">temp</a>
                 </div>
             </div>
         </div>
         
+        
+        
+        <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+</div>
+<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
         
     </div>
 </div>
 
 
 
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-17T06:51:39.000Z">2018-12-17</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Spring/">Spring</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Spring/深入spring-boot/">深入spring boot</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    5 分钟 读完 (大约 726 个字)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
             
-                <a class="has-link-black-ter" href="/2018/12/17/springboot-runtime-log-level/">springboot 运行时修改日志打印级别</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><p> Spring Boot 在 spring-boot-starter-actuator 模块中提供了日志相关的 EndPoint，通过该 EndPoint 可以在运行时不需要重启服务就可以修改日志的打印级别。</p>
-<p> 解决了以前修改日志打印级别必须要重启服务的烦恼。</p>
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="http://images.huotaihe.com/alipay.png" alt="支付宝"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="http://images.huotaihe.com/wechatpay.png" alt="微信"></div>
+</a>
+
+                
         </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
         
         
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2018/12/17/springboot-runtime-log-level/#more">阅读更多</a>
-                </div>
-            </div>
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/07/09/spring-boot-h2/">
+                <span class="level-item">Spring Boot 快速集成H2 内存数据库</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
         </div>
-        
         
     </div>
 </div>
 
 
 
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="comment-container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://www.wenjunjiang.win/js/gitment.js"></script>
+<script>
+	var gitment = new Gitment({
+		id: '2019/07/16/spring-boot-source-environment/',
+		owner: 'huotaihe',
+		repo: 'huotaihe.github.io',
+		oauth: {
+			client_id: '67d4fdced7522e210c75',
+			client_secret: '1539dd9d89d920309cce0c5f45510d7af4607acb',
+		},
+	})
+	gitment.render('comment-container')
+</script>
 
-
-
-
-
+    </div>
+</div>
 </div>
                 
 
@@ -606,6 +496,73 @@ var _hmt = _hmt || [];
         <div class="column-right-shadow is-hidden-widescreen ">
         
             
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#环境信息">
+        <span class="has-mr-6">1</span>
+        <span>环境信息</span>
+        </a></li><li>
+        <a class="is-flex" href="#事先准备">
+        <span class="has-mr-6">2</span>
+        <span>事先准备</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#增加idea内存">
+        <span class="has-mr-6">2.1</span>
+        <span>增加idea内存</span>
+        </a></li><li>
+        <a class="is-flex" href="#增加maven内存">
+        <span class="has-mr-6">2.2</span>
+        <span>增加maven内存</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#源码拉取">
+        <span class="has-mr-6">3</span>
+        <span>源码拉取</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#fork-官网仓库到自己的空间">
+        <span class="has-mr-6">3.1</span>
+        <span>fork 官网仓库到自己的空间</span>
+        </a></li><li>
+        <a class="is-flex" href="#clone-源码到本地磁盘">
+        <span class="has-mr-6">3.2</span>
+        <span>clone 源码到本地磁盘</span>
+        </a></li><li>
+        <a class="is-flex" href="#查看最新稳定tag">
+        <span class="has-mr-6">3.3</span>
+        <span>查看最新稳定tag</span>
+        </a></li><li>
+        <a class="is-flex" href="#checkout-当前发行版本">
+        <span class="has-mr-6">3.4</span>
+        <span>checkout 当前发行版本</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#构建源码">
+        <span class="has-mr-6">4</span>
+        <span>构建源码</span>
+        </a></li><li>
+        <a class="is-flex" href="#将源码导入IDEA">
+        <span class="has-mr-6">5</span>
+        <span>将源码导入IDEA</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#检验源码工程构建结果">
+        <span class="has-mr-6">5.1</span>
+        <span>检验源码工程构建结果</span>
+        </a></li><li>
+        <a class="is-flex" href="#异常问题解决">
+        <span class="has-mr-6">5.2</span>
+        <span>异常问题解决</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#验证">
+        <span class="has-mr-6">6</span>
+        <span>验证</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
         
             
 <div class="card widget">
@@ -949,6 +906,73 @@ var _hmt = _hmt || [];
 <div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
     
         
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#环境信息">
+        <span class="has-mr-6">1</span>
+        <span>环境信息</span>
+        </a></li><li>
+        <a class="is-flex" href="#事先准备">
+        <span class="has-mr-6">2</span>
+        <span>事先准备</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#增加idea内存">
+        <span class="has-mr-6">2.1</span>
+        <span>增加idea内存</span>
+        </a></li><li>
+        <a class="is-flex" href="#增加maven内存">
+        <span class="has-mr-6">2.2</span>
+        <span>增加maven内存</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#源码拉取">
+        <span class="has-mr-6">3</span>
+        <span>源码拉取</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#fork-官网仓库到自己的空间">
+        <span class="has-mr-6">3.1</span>
+        <span>fork 官网仓库到自己的空间</span>
+        </a></li><li>
+        <a class="is-flex" href="#clone-源码到本地磁盘">
+        <span class="has-mr-6">3.2</span>
+        <span>clone 源码到本地磁盘</span>
+        </a></li><li>
+        <a class="is-flex" href="#查看最新稳定tag">
+        <span class="has-mr-6">3.3</span>
+        <span>查看最新稳定tag</span>
+        </a></li><li>
+        <a class="is-flex" href="#checkout-当前发行版本">
+        <span class="has-mr-6">3.4</span>
+        <span>checkout 当前发行版本</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#构建源码">
+        <span class="has-mr-6">4</span>
+        <span>构建源码</span>
+        </a></li><li>
+        <a class="is-flex" href="#将源码导入IDEA">
+        <span class="has-mr-6">5</span>
+        <span>将源码导入IDEA</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#检验源码工程构建结果">
+        <span class="has-mr-6">5.1</span>
+        <span>检验源码工程构建结果</span>
+        </a></li><li>
+        <a class="is-flex" href="#异常问题解决">
+        <span class="has-mr-6">5.2</span>
+        <span>异常问题解决</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#验证">
+        <span class="has-mr-6">6</span>
+        <span>验证</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
     
         
 <div class="card widget">
