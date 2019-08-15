@@ -2,25 +2,23 @@
 <html  lang="zh">
 <head>
     <meta charset="utf-8">
-<title>记一次docker  容器把宿主机系统盘写满的事件 - 白马度和|Huotaihe</title>
+<title>Kafka broker 安装 - 白马度和|Huotaihe</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
 
 
-    <meta name="description" content="环境信息 Docker version: 1.13.1 Linux version: CentOS Linux release 7.3.1611 (Core) 磁盘分配情况  12345678910[root@HZD-U-ISEE-STUDIO-01 ~]# df -hFilesystem                                               Size  Us">
-<meta name="keywords" content="Docker,Linux">
+    <meta name="description" content="环境信息 java: “1.8.0_191” Centos: 7.3.1611 (Core) Zookeeper: 3.5.5 Kafka: 2.3.0">
+<meta name="keywords" content="temp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="记一次docker  容器把宿主机系统盘写满的事件">
-<meta property="og:url" content="http://blog.huotaihe.com/2019/05/23/docker-fills-system-volume01/index.html">
+<meta property="og:title" content="Kafka broker 安装">
+<meta property="og:url" content="http://blog.huotaihe.com/2019/08/15/linux-kafka-broker-install/index.html">
 <meta property="og:site_name" content="白马度和|Huotaihe">
-<meta property="og:description" content="环境信息 Docker version: 1.13.1 Linux version: CentOS Linux release 7.3.1611 (Core) 磁盘分配情况  12345678910[root@HZD-U-ISEE-STUDIO-01 ~]# df -hFilesystem                                               Size  Us">
+<meta property="og:description" content="环境信息 java: “1.8.0_191” Centos: 7.3.1611 (Core) Zookeeper: 3.5.5 Kafka: 2.3.0">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://images.huotaihe.com/2019-05-23-18-19-31.png">
-<meta property="og:updated_time" content="2019-06-05T11:38:31.144Z">
+<meta property="og:updated_time" content="2019-08-15T05:20:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="记一次docker  容器把宿主机系统盘写满的事件">
-<meta name="twitter:description" content="环境信息 Docker version: 1.13.1 Linux version: CentOS Linux release 7.3.1611 (Core) 磁盘分配情况  12345678910[root@HZD-U-ISEE-STUDIO-01 ~]# df -hFilesystem                                               Size  Us">
-<meta name="twitter:image" content="http://images.huotaihe.com/2019-05-23-18-19-31.png">
+<meta name="twitter:title" content="Kafka broker 安装">
+<meta name="twitter:description" content="环境信息 java: “1.8.0_191” Centos: 7.3.1611 (Core) Zookeeper: 3.5.5 Kafka: 2.3.0">
 
 
 
@@ -160,17 +158,17 @@ var _hmt = _hmt || [];
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-05-23T10:51:39.000Z">2019-05-23</time>
+                <time class="level-item has-text-grey" datetime="2019-08-15T05:20:05.000Z">2019-08-15</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/生产问题解决/">生产问题解决</a>
+                <a class="has-link-grey -link" href="/categories/temp/">temp</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    4 分钟 读完 (大约 642 个字)
+                    2 分钟 读完 (大约 355 个字)
                 </span>
                 
             </div>
@@ -178,82 +176,34 @@ var _hmt = _hmt || [];
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                记一次docker  容器把宿主机系统盘写满的事件
+                Kafka broker 安装
             
         </h1>
         <div class="content">
             <h2 id="环境信息"><a href="#环境信息" class="headerlink" title="环境信息"></a>环境信息</h2><ul>
-<li>Docker version: 1.13.1</li>
-<li>Linux version: CentOS Linux release 7.3.1611 (Core)</li>
-<li>磁盘分配情况  <figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@HZD-U-ISEE-STUDIO-01 ~]<span class="hljs-comment"># df -h</span></span><br><span class="line">Filesystem                                               Size  Used Avail Use% Mounted on</span><br><span class="line">/dev/vda1                                                 40G  6.9G   31G  19% /</span><br><span class="line">devtmpfs                                                 3.9G     0  3.9G   0% /dev</span><br><span class="line">tmpfs                                                    3.9G   12K  3.9G   1% /dev/shm</span><br><span class="line">tmpfs                                                    3.9G   35M  3.8G   1% /run</span><br><span class="line">tmpfs                                                    3.9G     0  3.9G   0% /sys/fs/cgroup</span><br><span class="line">/dev/vdb1                                                 99G  7.3G   87G   8% /alidata1</span><br><span class="line">tmpfs                                                    783M     0  783M   0% /run/user/0</span><br><span class="line">tmpfs                                                    783M     0  783M   0% /run/user/1000</span><br></pre></td></tr></table></figure>
+<li>java: “1.8.0_191”</li>
+<li>Centos: 7.3.1611 (Core)</li>
+<li>Zookeeper: 3.5.5</li>
+<li>Kafka: 2.3.0<a id="more"></a>
 </li>
 </ul>
-<h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><blockquote>
-<p>服务器在运行的过程中，发现不能创建新的docker容器<br><a id="more"></a></p>
-</blockquote>
-<h2 id="定位过程"><a href="#定位过程" class="headerlink" title="定位过程"></a>定位过程</h2><ol>
-<li><p>查看CPU和内存</p>
- <figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">top</span><br></pre></td></tr></table></figure>
- <figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">free -m</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<blockquote>
-<p>发现CPU和内存使用率正常</p>
-</blockquote>
-<ol start="2">
-<li>查看磁盘使用情况<blockquote>
-<ol>
-<li>由于一些容器会向nas盘写视频文件，就考虑到有可能是磁盘满了</li>
-<li>检查后发现docker的虚拟盘把宿主机的系统盘写满了，导致宿主主机没有磁盘空间创建新的容器</li>
-</ol>
-</blockquote>
-</li>
-</ol>
-<p><img src="http://images.huotaihe.com/2019-05-23-18-19-31.png" alt="在这里插入图片描述"></p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><ul>
-<li>把docker 容器文件的存储位置迁移到容量更大的磁盘(“/alidata1”) 下面</li>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>下载地址：<a href="http://mirror.bit.edu.cn/apache/kafka/2.3.0/kafka_2.12-2.3.0.tgz" target="_blank" rel="noopener">http://mirror.bit.edu.cn/apache/kafka/2.3.0/kafka_2.12-2.3.0.tgz</a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>Kafaka 使用Zookeeper  保存集群的元数据信息和消费者信息。<br>Kafka也自带了Zookeeper，可以直接从脚本启动。<br>Zookeeper 的安装教程见文章：<a href="http://blog.huotaihe.com/2019/08/15/linux-zookeeper-standalone-install/">http://blog.huotaihe.com/2019/08/15/linux-zookeeper-standalone-install/</a></p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">## 解压kafka_2.12-2.3.0.tgz</span></span><br><span class="line">tar -xzvf kafka_2.12-2.3.0.tgz</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">## 将解压目录移动到/usr/local</span></span><br><span class="line">mv kafka_2.12-2.3.0 /usr/<span class="hljs-built_in">local</span>/kafka</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">## 进入kafka安装目录</span></span><br><span class="line"><span class="hljs-built_in">cd</span> /usr/<span class="hljs-built_in">local</span>/kafka/</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">## 启动Kafaka</span></span><br><span class="line">bin/kafka-server-start.sh config/server.properties</span><br></pre></td></tr></table></figure>
+<p>出现如下日志说明启动成功<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[2019-08-15 13:39:04,087] INFO Kafka version: 2.3.0 (org.apache.kafka.common.utils.AppInfoParser)</span><br><span class="line">[2019-08-15 13:39:04,087] INFO Kafka commitId: fc1aaa116b661c8a (org.apache.kafka.common.utils.AppInfoParser)</span><br><span class="line">[2019-08-15 13:39:04,087] INFO Kafka startTimeMs: 1565847544082 (org.apache.kafka.common.utils.AppInfoParser)</span><br><span class="line">[2019-08-15 13:39:04,092] INFO [KafkaServer id=0] started (kafka.server.KafkaServer)</span><br></pre></td></tr></table></figure></p>
+<h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><h3 id="创建主题"><a href="#创建主题" class="headerlink" title="创建主题"></a>创建主题</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic <span class="hljs-built_in">test</span></span><br></pre></td></tr></table></figure>
+<h3 id="验证主题"><a href="#验证主题" class="headerlink" title="验证主题"></a>验证主题</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/kafka-topics.sh --zookeeper localhost:2181 --describe --topic <span class="hljs-built_in">test</span></span><br></pre></td></tr></table></figure>
+<p>输出如下内容<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Topic:test	PartitionCount:1	ReplicationFactor:1	Configs:</span><br><span class="line">	Topic: test	Partition: 0	Leader: 0	Replicas: 0	Isr: 0</span><br></pre></td></tr></table></figure></p>
+<h3 id="向主题上发布消息"><a href="#向主题上发布消息" class="headerlink" title="向主题上发布消息"></a>向主题上发布消息</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bin/kafka-console-producer.sh --broker-list localhost:9092 --topic <span class="hljs-built_in">test</span></span><br><span class="line">&gt;This is a message</span><br><span class="line">&gt;This is another message</span><br></pre></td></tr></table></figure>
+<p>输入完成后通过”^D” 结束输入</p>
+<h3 id="从主题上读取消息"><a href="#从主题上读取消息" class="headerlink" title="从主题上读取消息"></a>从主题上读取消息</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <span class="hljs-built_in">test</span> --from-beginning</span><br></pre></td></tr></table></figure>
+<p>输出如下内容<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">This is a message</span><br><span class="line">This is another message</span><br></pre></td></tr></table></figure></p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>以上就是kafka 单broker的搭建教程。<br>会有新的文章介绍如何搭建kafka集群。</p>
+<hr>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a href="http://kafka.apache.org/quickstart" target="_blank" rel="noopener">http://kafka.apache.org/quickstart</a></li>
+<li>《Kafka 权威指南》</li>
 </ul>
-<h2 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h2><ol>
-<li><p>删除现有的docker容器</p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker stop `docker -a -q`</span><br><span class="line">docker rm `docker -a -q`</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>停止docker 服务</p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop docker</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>创建docker 文件存储目录</p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /alidata1/docker/graph</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改配置文件</p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/sysconfig/docker</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>将文件中的OPTIONS那一行修改如下<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">OPTIONS=<span class="hljs-string">'--selinux-enabled --log-driver=journald --signature-verification=false --graph=/alidata1/docker/graph'</span></span><br></pre></td></tr></table></figure></p>
-<ol start="5">
-<li><p>重新加载配置</p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl daemon-reload</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>启动docker服务</p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>重新拉取镜像</p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull &lt;docker image id&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<blockquote>
-<p>ps : 把原来’/var/lib/docker/‘ 目录下的文件拷贝过来，页可以看到镜像，并创建容器；但是容器启动后就消亡了。具体原因待定位，建议重新拉取镜像。</p>
-</blockquote>
-<ol start="8">
-<li><p>启动容器</p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run &lt;....&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>验证结果</p>
-</li>
-</ol>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="hljs-comment"># df -h</span></span><br><span class="line">Filesystem                                               Size  Used Avail Use% Mounted on</span><br><span class="line">/dev/vda1                                                 40G  6.9G   31G  19% /</span><br><span class="line">devtmpfs                                                 3.9G     0  3.9G   0% /dev</span><br><span class="line">tmpfs                                                    3.9G   12K  3.9G   1% /dev/shm</span><br><span class="line">tmpfs                                                    3.9G   35M  3.8G   1% /run</span><br><span class="line">tmpfs                                                    3.9G     0  3.9G   0% /sys/fs/cgroup</span><br><span class="line">/dev/vdb1                                                 99G  7.3G   87G   8% /alidata1</span><br><span class="line">tmpfs                                                    783M     0  783M   0% /run/user/0</span><br><span class="line">tmpfs                                                    783M     0  783M   0% /run/user/1000</span><br><span class="line">overlay                                                   99G  7.3G   87G   8% /alidata1/docker/graph/overlay2/e071ea3439ff52a12ee127875b8511f5d05fdea236386495f99f4ece33bdfeb2/merged</span><br><span class="line">shm                                                       64M     0   64M   0% /alidata1/docker/graph/containers/841a2f9199f5da6159a15156762d5d488eee21c46237b82c192018d1264d6328/shm</span><br><span class="line">overlay                                                   99G  7.3G   87G   8% /alidata1/docker/graph/overlay2/850f00f1665f2c920e1d00aa836517e08e70df48d2fee0c3e4172dd2f95dd7f7/merged</span><br><span class="line">overlay                                                   99G  7.3G   87G   8% /alidata1/docker/graph/overlay2/12e6e98dd0611e21d70378f32810f97fe86d1c30a9c9c562faf3bfb826d01244/merged</span><br><span class="line">[root@localhost ~]<span class="hljs-comment">#</span></span><br></pre></td></tr></table></figure>
-<p>通过查看磁盘情况，发现新的容器文件已经写到数据盘下了</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
-<p>docker 在生产环境运行的时候，不要把docker文件写在默认的系统盘”/var/lib/docker” 路径下</p>
-</blockquote>
 
         </div>
         
@@ -261,7 +211,7 @@ var _hmt = _hmt || [];
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/Docker/">Docker</a>, <a class="has-link-grey -link" href="/tags/Linux/">Linux</a>
+                    <a class="has-link-grey -link" href="/tags/temp/">temp</a>
                 </div>
             </div>
         </div>
@@ -317,17 +267,10 @@ var _hmt = _hmt || [];
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/06/05/linux-batch-rename-files/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Linux 下批量重命名文件</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/04/17/rabbitmq-install-on-centos7-md/">
-                <span class="level-item">在Centos7 上搭建rabbitmq</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/15/linux-zookeeper-standalone-install/">
+                <span class="level-item">Zookeeper 单点环境搭建</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -346,7 +289,7 @@ var _hmt = _hmt || [];
 <script src="https://www.wenjunjiang.win/js/gitment.js"></script>
 <script>
 	var gitment = new Gitment({
-		id: '2019/05/23/docker-fills-system-volume01/',
+		id: '2019/08/15/linux-kafka-broker-install/',
 		owner: 'huotaihe',
 		repo: 'huotaihe.github.io',
 		oauth: {
@@ -553,25 +496,41 @@ var _hmt = _hmt || [];
         <span class="has-mr-6">1</span>
         <span>环境信息</span>
         </a></li><li>
-        <a class="is-flex" href="#问题描述">
+        <a class="is-flex" href="#下载">
         <span class="has-mr-6">2</span>
-        <span>问题描述</span>
+        <span>下载</span>
         </a></li><li>
-        <a class="is-flex" href="#定位过程">
+        <a class="is-flex" href="#安装">
         <span class="has-mr-6">3</span>
-        <span>定位过程</span>
+        <span>安装</span>
         </a></li><li>
-        <a class="is-flex" href="#解决方案">
+        <a class="is-flex" href="#验证">
         <span class="has-mr-6">4</span>
-        <span>解决方案</span>
+        <span>验证</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#创建主题">
+        <span class="has-mr-6">4.1</span>
+        <span>创建主题</span>
         </a></li><li>
-        <a class="is-flex" href="#解决过程">
+        <a class="is-flex" href="#验证主题">
+        <span class="has-mr-6">4.2</span>
+        <span>验证主题</span>
+        </a></li><li>
+        <a class="is-flex" href="#向主题上发布消息">
+        <span class="has-mr-6">4.3</span>
+        <span>向主题上发布消息</span>
+        </a></li><li>
+        <a class="is-flex" href="#从主题上读取消息">
+        <span class="has-mr-6">4.4</span>
+        <span>从主题上读取消息</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#结语">
         <span class="has-mr-6">5</span>
-        <span>解决过程</span>
+        <span>结语</span>
         </a></li><li>
-        <a class="is-flex" href="#总结">
+        <a class="is-flex" href="#参考资料">
         <span class="has-mr-6">6</span>
-        <span>总结</span>
+        <span>参考资料</span>
         </a></li></ul>
         </div>
     </div>
@@ -942,25 +901,41 @@ var _hmt = _hmt || [];
         <span class="has-mr-6">1</span>
         <span>环境信息</span>
         </a></li><li>
-        <a class="is-flex" href="#问题描述">
+        <a class="is-flex" href="#下载">
         <span class="has-mr-6">2</span>
-        <span>问题描述</span>
+        <span>下载</span>
         </a></li><li>
-        <a class="is-flex" href="#定位过程">
+        <a class="is-flex" href="#安装">
         <span class="has-mr-6">3</span>
-        <span>定位过程</span>
+        <span>安装</span>
         </a></li><li>
-        <a class="is-flex" href="#解决方案">
+        <a class="is-flex" href="#验证">
         <span class="has-mr-6">4</span>
-        <span>解决方案</span>
+        <span>验证</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#创建主题">
+        <span class="has-mr-6">4.1</span>
+        <span>创建主题</span>
         </a></li><li>
-        <a class="is-flex" href="#解决过程">
+        <a class="is-flex" href="#验证主题">
+        <span class="has-mr-6">4.2</span>
+        <span>验证主题</span>
+        </a></li><li>
+        <a class="is-flex" href="#向主题上发布消息">
+        <span class="has-mr-6">4.3</span>
+        <span>向主题上发布消息</span>
+        </a></li><li>
+        <a class="is-flex" href="#从主题上读取消息">
+        <span class="has-mr-6">4.4</span>
+        <span>从主题上读取消息</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#结语">
         <span class="has-mr-6">5</span>
-        <span>解决过程</span>
+        <span>结语</span>
         </a></li><li>
-        <a class="is-flex" href="#总结">
+        <a class="is-flex" href="#参考资料">
         <span class="has-mr-6">6</span>
-        <span>总结</span>
+        <span>参考资料</span>
         </a></li></ul>
         </div>
     </div>
