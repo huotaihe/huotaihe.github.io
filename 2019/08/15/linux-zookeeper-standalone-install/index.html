@@ -2,22 +2,23 @@
 <html  lang="zh">
 <head>
     <meta charset="utf-8">
-<title>标签: session - 白马度和|Huotaihe</title>
+<title>Zookeeper 单点环境搭建 - 白马度和|Huotaihe</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
 
 
-    <meta name="description" content="和太贺的个人技术博客">
-<meta name="keywords" content="和太贺 白马度和 spring boot cloud">
-<meta property="og:type" content="website">
-<meta property="og:title" content="白马度和|Huotaihe">
-<meta property="og:url" content="http://blog.huotaihe.com/tags/session/index.html">
+    <meta name="description" content="环境信息 java: “1.8.0_191” Centos: 7.3.1611 (Core) Zookeeper: 3.5.5">
+<meta name="keywords" content="temp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Zookeeper 单点环境搭建">
+<meta property="og:url" content="http://blog.huotaihe.com/2019/08/15/linux-zookeeper-standalone-install/index.html">
 <meta property="og:site_name" content="白马度和|Huotaihe">
-<meta property="og:description" content="和太贺的个人技术博客">
+<meta property="og:description" content="环境信息 java: “1.8.0_191” Centos: 7.3.1611 (Core) Zookeeper: 3.5.5">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-15T02:46:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="白马度和|Huotaihe">
-<meta name="twitter:description" content="和太贺的个人技术博客">
+<meta name="twitter:title" content="Zookeeper 单点环境搭建">
+<meta name="twitter:description" content="环境信息 java: “1.8.0_191” Centos: 7.3.1611 (Core) Zookeeper: 3.5.5">
 
 
 
@@ -134,6 +135,10 @@ var _hmt = _hmt || [];
                     
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -148,33 +153,22 @@ var _hmt = _hmt || [];
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/tags">标签</a></li>
-            <li class="is-active"><a href="#" aria-current="page">session</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-18T03:11:00.000Z">2019-06-18</time>
+                <time class="level-item has-text-grey" datetime="2019-08-15T02:46:59.000Z">2019-08-15</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Spring/">Spring</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Spring/深入spring-boot/">深入spring boot</a>
+                <a class="has-link-grey -link" href="/categories/temp/">temp</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    5 分钟 读完 (大约 775 个字)
+                    3 分钟 读完 (大约 416 个字)
                 </span>
                 
             </div>
@@ -182,37 +176,130 @@ var _hmt = _hmt || [];
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/06/18/spring-boot-session/">Spring Boot 集成Spring Session 实现全局Session</a>
+                Zookeeper 单点环境搭建
             
         </h1>
         <div class="content">
-            <h2 id="Spring-Session-简介"><a href="#Spring-Session-简介" class="headerlink" title="Spring Session 简介"></a>Spring Session 简介</h2><p>Spring Session 为管理用户Session 信息提供了API和实现</p>
-<blockquote>
-<p>Spring Session provides an API and implementations for managing a user’s session information.</p>
-</blockquote>
-<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>  Spring Session 使应用支持集群回话变得更容易，而且不需要依赖于特定应用容器的解决方案。还提供如下透明集成：<br></p>
+            <h2 id="环境信息"><a href="#环境信息" class="headerlink" title="环境信息"></a>环境信息</h2><ul>
+<li>java: “1.8.0_191”</li>
+<li>Centos: 7.3.1611 (Core)</li>
+<li>Zookeeper: 3.5.5<a id="more"></a>
+</li>
+</ul>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>下载地址： <a href="http://mirror.bit.edu.cn/apache/zookeeper/zookeeper-3.5.5/apache-zookeeper-3.5.5-bin.tar.gz" target="_blank" rel="noopener">http://mirror.bit.edu.cn/apache/zookeeper/zookeeper-3.5.5/apache-zookeeper-3.5.5-bin.tar.gz</a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">## step1 解压安装包</span></span><br><span class="line">tar -xzvf apache-zookeeper-3.5.5-bin.tar.gz</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">## step2 将解压后的安装包移动到/usr/local目录下</span></span><br><span class="line">mv apache-zookeeper-3.5.5-bin /usr/<span class="hljs-built_in">local</span>/zookeeper</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">## step3 创建数据目录</span></span><br><span class="line">mkdir -p /var/lib/zookeeper</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">## step4 编辑配置文件</span></span><br><span class="line">cat &gt; /usr/<span class="hljs-built_in">local</span>/zookeeper/conf/zoo.cfg &lt;&lt; EOF</span><br><span class="line">&gt; tickTime=2000</span><br><span class="line">&gt; dataDir=/var/lib/zookeeper</span><br><span class="line">&gt; clientPort=2181</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">## step5 设置java环境变量，如果已经设置可以忽略</span></span><br><span class="line"><span class="hljs-built_in">export</span> JAVA_HOME=/opt/jdk1.8.0_191</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">##  step6 启动zookeeper</span></span><br><span class="line">/usr/<span class="hljs-built_in">local</span>/zookeeper/bin/zkServer.sh start</span><br></pre></td></tr></table></figure>
+<p>控制台输出如下内容说明启动成功<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ZooKeeper JMX enabled by default</span><br><span class="line">Using config: /usr/<span class="hljs-built_in">local</span>/zookeeper/bin/../conf/zoo.cfg</span><br><span class="line">Starting zookeeper ... STARTED</span><br></pre></td></tr></table></figure></p>
+<h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><h3 id="方法一-通过telnet-输入srvr"><a href="#方法一-通过telnet-输入srvr" class="headerlink" title="方法一 通过telnet 输入srvr"></a>方法一 通过telnet 输入srvr</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">telnet 127.0.0.1 2181</span><br><span class="line">Trying 127.0.0.1...</span><br><span class="line">Connected to 127.0.0.1.</span><br><span class="line">Escape character is <span class="hljs-string">'^]'</span>.</span><br><span class="line">srvr</span><br><span class="line">Zookeeper version: 3.5.5-390fe37ea45dee01bf87dc1c042b5e3dcce88653, built on 05/03/2019 12:07 GMT</span><br><span class="line">Latency min/avg/max: 0/0/0</span><br><span class="line">Received: 1</span><br><span class="line">Sent: 0</span><br><span class="line">Connections: 1</span><br><span class="line">Outstanding: 0</span><br><span class="line">Zxid: 0x0</span><br><span class="line">Mode: standalone</span><br><span class="line">Node count: 5</span><br><span class="line">Connection closed by foreign host.</span><br></pre></td></tr></table></figure>
+<h3 id="方法二-通过zkServer-工具"><a href="#方法二-通过zkServer-工具" class="headerlink" title="方法二 通过zkServer 工具"></a>方法二 通过zkServer 工具</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="hljs-built_in">local</span>/zookeeper/bin/zkServer.sh status</span><br><span class="line">ZooKeeper JMX enabled by default</span><br><span class="line">Using config: /usr/<span class="hljs-built_in">local</span>/zookeeper/bin/../conf/zoo.cfg</span><br><span class="line">Client port found: 2181. Client address: localhost.</span><br><span class="line">Mode: standalone</span><br></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h3 id="问题1："><a href="#问题1：" class="headerlink" title="问题1："></a>问题1：</h3><p>安装过程中启动的时候遇到了如下异常<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Could not find or load main class  org.apache.zookeeper.server.quorum.QuorumPeerMain</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>通过查资料发现是下载的安装包不对(参考文档二)</p>
+<p>apache 提供了两个Zookeeper的下载包</p>
+<p>apache-zookeeper-3.5.5-bin.tar.gz 20-May-2019 18:40   10M<br>apache-zookeeper-3.5.5.tar.gz     20-May-2019 18:40  3.1M  </p>
+<p>下载apache-zookeeper-3.5.5.tar.gz 包安装后悔有问题。<br>重新下载apache-zookeeper-3.5.5-bin.tar.gz 并安装后问题解决。</p>
+<p>具体原因待跟进</p>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ul>
+<li><a href="https://zookeeper.apache.org/doc/current/zookeeperStarted.html" target="_blank" rel="noopener">https://zookeeper.apache.org/doc/current/zookeeperStarted.html</a></li>
+<li><a href="https://stackoverflow.com/questions/28484398/starting-zookeeper-cluster-error-could-not-find-or-load-main-class-org-apache" target="_blank" rel="noopener">https://stackoverflow.com/questions/28484398/starting-zookeeper-cluster-error-could-not-find-or-load-main-class-org-apache</a></li>
+</ul>
+
         </div>
         
-        
-        <div class="level is-mobile">
+        <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/06/18/spring-boot-session/#more">阅读更多</a>
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/temp/">temp</a>
                 </div>
             </div>
         </div>
         
+        
+        
+        <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+</div>
+<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
         
     </div>
 </div>
 
 
 
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>支付宝</span>
+    <div class="qrcode"><img src="http://images.huotaihe.com/alipay.png" alt="支付宝"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>微信</span>
+    <div class="qrcode"><img src="http://images.huotaihe.com/wechatpay.png" alt="微信"></div>
+</a>
+
+                
+        </div>
+    </div>
+</div>
 
 
 
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/07/16/spring-boot-source-environment/">
+                <span class="level-item">［Spring Boot］ 搭建源码调试环境</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="comment-container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://www.wenjunjiang.win/js/gitment.js"></script>
+<script>
+	var gitment = new Gitment({
+		id: '2019/08/15/linux-zookeeper-standalone-install/',
+		owner: 'huotaihe',
+		repo: 'huotaihe.github.io',
+		oauth: {
+			client_id: '67d4fdced7522e210c75',
+			client_secret: '1539dd9d89d920309cce0c5f45510d7af4607acb',
+		},
+	})
+	gitment.render('comment-container')
+</script>
+
+    </div>
+</div>
 </div>
                 
 
@@ -396,6 +483,57 @@ var _hmt = _hmt || [];
         <div class="column-right-shadow is-hidden-widescreen ">
         
             
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#环境信息">
+        <span class="has-mr-6">1</span>
+        <span>环境信息</span>
+        </a></li><li>
+        <a class="is-flex" href="#下载">
+        <span class="has-mr-6">2</span>
+        <span>下载</span>
+        </a></li><li>
+        <a class="is-flex" href="#安装">
+        <span class="has-mr-6">3</span>
+        <span>安装</span>
+        </a></li><li>
+        <a class="is-flex" href="#验证">
+        <span class="has-mr-6">4</span>
+        <span>验证</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#方法一-通过telnet-输入srvr">
+        <span class="has-mr-6">4.1</span>
+        <span>方法一 通过telnet 输入srvr</span>
+        </a></li><li>
+        <a class="is-flex" href="#方法二-通过zkServer-工具">
+        <span class="has-mr-6">4.2</span>
+        <span>方法二 通过zkServer 工具</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#总结">
+        <span class="has-mr-6">5</span>
+        <span>总结</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#问题1：">
+        <span class="has-mr-6">5.1</span>
+        <span>问题1：</span>
+        </a></li><li>
+        <a class="is-flex" href="#解决方法">
+        <span class="has-mr-6">5.2</span>
+        <span>解决方法</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#参考文档">
+        <span class="has-mr-6">6</span>
+        <span>参考文档</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
         
             
 <div class="card widget">
@@ -750,6 +888,57 @@ var _hmt = _hmt || [];
 <div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
     
         
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#环境信息">
+        <span class="has-mr-6">1</span>
+        <span>环境信息</span>
+        </a></li><li>
+        <a class="is-flex" href="#下载">
+        <span class="has-mr-6">2</span>
+        <span>下载</span>
+        </a></li><li>
+        <a class="is-flex" href="#安装">
+        <span class="has-mr-6">3</span>
+        <span>安装</span>
+        </a></li><li>
+        <a class="is-flex" href="#验证">
+        <span class="has-mr-6">4</span>
+        <span>验证</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#方法一-通过telnet-输入srvr">
+        <span class="has-mr-6">4.1</span>
+        <span>方法一 通过telnet 输入srvr</span>
+        </a></li><li>
+        <a class="is-flex" href="#方法二-通过zkServer-工具">
+        <span class="has-mr-6">4.2</span>
+        <span>方法二 通过zkServer 工具</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#总结">
+        <span class="has-mr-6">5</span>
+        <span>总结</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#问题1：">
+        <span class="has-mr-6">5.1</span>
+        <span>问题1：</span>
+        </a></li><li>
+        <a class="is-flex" href="#解决方法">
+        <span class="has-mr-6">5.2</span>
+        <span>解决方法</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#参考文档">
+        <span class="has-mr-6">6</span>
+        <span>参考文档</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
     
         
 <div class="card widget">
