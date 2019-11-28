@@ -2,23 +2,22 @@
 <html  lang="zh">
 <head>
     <meta charset="utf-8">
-<title>Linux 常用命令手册 - 白马度和|Huotaihe</title>
+<title>归档: 2019/11 - 白马度和|Huotaihe</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
 
 
-    <meta name="description" content="收集工作中常用到的Linux 命令；只收集不易记忆的，常用的不在罗列都在脑子里。 目录管理查看当前目录总共占的容量，而不单独列出各子项占用的容量1du -sh">
-<meta name="keywords" content="Linux,Shell,Manual">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Linux 常用命令手册">
-<meta property="og:url" content="http://blog.huotaihe.com/2018/12/20/linux-common-command-manual-md/index.html">
+    <meta name="description" content="和太贺的个人技术博客">
+<meta name="keywords" content="和太贺 白马度和 spring boot cloud">
+<meta property="og:type" content="website">
+<meta property="og:title" content="白马度和|Huotaihe">
+<meta property="og:url" content="http://blog.huotaihe.com/archives/2019/11/index.html">
 <meta property="og:site_name" content="白马度和|Huotaihe">
-<meta property="og:description" content="收集工作中常用到的Linux 命令；只收集不易记忆的，常用的不在罗列都在脑子里。 目录管理查看当前目录总共占的容量，而不单独列出各子项占用的容量1du -sh">
+<meta property="og:description" content="和太贺的个人技术博客">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-23T10:11:44.855Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux 常用命令手册">
-<meta name="twitter:description" content="收集工作中常用到的Linux 命令；只收集不易记忆的，常用的不在罗列都在脑子里。 目录管理查看当前目录总共占的容量，而不单独列出各子项占用的容量1du -sh">
+<meta name="twitter:title" content="白马度和|Huotaihe">
+<meta name="twitter:description" content="和太贺的个人技术博客">
 
 
 
@@ -148,155 +147,39 @@ var _hmt = _hmt || [];
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-20T11:58:58.142Z">2018-12-20</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Linux-常用命令手册/">Linux 常用命令手册</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 352 个字)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                Linux 常用命令手册
-            
-        </h1>
-        <div class="content">
-            <p>收集工作中常用到的Linux 命令；<br>只收集不易记忆的，常用的不在罗列都在脑子里。</p>
-<h2 id="目录管理"><a href="#目录管理" class="headerlink" title="目录管理"></a>目录管理</h2><h3 id="查看当前目录总共占的容量，而不单独列出各子项占用的容量"><a href="#查看当前目录总共占的容量，而不单独列出各子项占用的容量" class="headerlink" title="查看当前目录总共占的容量，而不单独列出各子项占用的容量"></a>查看当前目录总共占的容量，而不单独列出各子项占用的容量</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du -sh</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h3 id="查看当前目录下一级子文件和子目录占用的磁盘容量"><a href="#查看当前目录下一级子文件和子目录占用的磁盘容量" class="headerlink" title="查看当前目录下一级子文件和子目录占用的磁盘容量"></a>查看当前目录下一级子文件和子目录占用的磁盘容量</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du -lh --max-depth=1</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="系统管理"><a href="#系统管理" class="headerlink" title="系统管理"></a>系统管理</h2><h3 id="查看端口占用情况查看端口占用情况"><a href="#查看端口占用情况查看端口占用情况" class="headerlink" title="查看端口占用情况查看端口占用情况"></a>查看端口占用情况查看端口占用情况</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsof -i:&lt;port&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="查看操作系统的发行版本"><a href="#查看操作系统的发行版本" class="headerlink" title="查看操作系统的发行版本"></a>查看操作系统的发行版本</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsb_release -a</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>例子</p>
-</blockquote>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="hljs-comment"># lsb_release -a</span></span><br><span class="line">LSB Version:	:core-4.1-amd64:core-4.1-noarch</span><br><span class="line">Distributor ID:	CentOS</span><br><span class="line">Description:	CentOS Linux release 7.3.1611 (Core)</span><br><span class="line">Release:	7.3.1611</span><br><span class="line">Codename:	Core</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="VIM"><a href="#VIM" class="headerlink" title="VIM"></a>VIM</h2><h3 id="vim-统计字符串出现次数（词频）"><a href="#vim-统计字符串出现次数（词频）" class="headerlink" title="vim 统计字符串出现次数（词频）"></a>vim 统计字符串出现次数（词频）</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># &lt;pattern&gt; 是需要统计的字符串</span></span><br><span class="line">:%s/&lt;pattern&gt;//gn</span><br><span class="line"></span><br><span class="line">%s/Ø/\r/g</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">## 删除所有换行符号</span></span><br><span class="line">%s\/\n\/\/gc</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>% - 操作区间，全文本；可以使用1, $或行区间替代<br>    s - substitute<br>    <pattern> - 查询字符串<br>    // - 无替代文本。如果偏好，中间可以加任意字符！建议添加‘～’,重复上次查询<br>    g - Replace all occurrences in the line.  Without this argument,  replacement occurs only for the first occurrence in each line.因此，如果不用此标志，就变成统计出现pattern的行数。<br>    n - Report the number of matches, do not actually substitute.这是核心标志，也是达到目的的标志。同时也说明了为什么’//‘之间可以添加任意字符！</pattern></p>
-</blockquote>
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
 
-        </div>
-        
-        <div class="level is-size-7 is-uppercase">
-            <div class="level-start">
-                <div class="level-item">
-                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/Linux/">Linux</a>, <a class="has-link-grey -link" href="/tags/Manual/">Manual</a>, <a class="has-link-grey -link" href="/tags/Shell/">Shell</a>
-                </div>
-            </div>
-        </div>
-        
-        
-        
-        <div class="bdsharebuttonbox">
-    <a href="#" class="bds_more" data-cmd="more"></a>
-    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
-    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
-    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
-    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-</div>
-<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
-        
-    </div>
-</div>
-
-
-
-<div class="card">
+<div class="card widget">
     <div class="card-content">
-        <h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3>
-        <div class="buttons is-centered">
-            
+        <h3 class="tag is-link">
+        十一月 2019
+        </h3>
+        <div class="timeline">
+        
+            <article class="media">
                 
-<a class="button is-info donate">
-    <span class="icon is-small">
-        <i class="fab fa-alipay"></i>
-    </span>
-    <span>支付宝</span>
-    <div class="qrcode"><img src="http://images.huotaihe.com/alipay.png" alt="支付宝"></div>
-</a>
-
-                
-                
-<a class="button is-success donate">
-    <span class="icon is-small">
-        <i class="fab fa-weixin"></i>
-    </span>
-    <span>微信</span>
-    <div class="qrcode"><img src="http://images.huotaihe.com/wechatpay.png" alt="微信"></div>
-</a>
-
-                
+                <div class="media-content">
+                    <div class="content">
+                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-11-27T10:39:24.000Z">2019-11-27</time>
+                        <a href="/2019/11/27/linux-redis-standalone-install/" class="has-link-black-ter is-size-6">Centos7 安装redis</a>
+                        <div class="level article-meta is-mobile">
+                            <div class="level-left">
+                                
+                                <div class="level-item is-size-7 is-uppercase">
+                                <a class="has-link-grey -link" href="/categories/temp/">temp</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        
         </div>
     </div>
 </div>
 
 
-
-<div class="card card-transparent">
-    <div class="level post-navigation is-flex-wrap is-mobile">
-        
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/04/17/rabbitmq-install-on-centos7-md/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">在Centos7 上搭建rabbitmq</span>
-            </a>
-        </div>
-        
-        
-        <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2018/12/18/git-commond-manual-md/">
-                <span class="level-item">git 常用命令手册</span>
-                <i class="level-item fas fa-chevron-right"></i>
-            </a>
-        </div>
-        
-    </div>
-</div>
-
-
-
-<div class="card">
-    <div class="card-content">
-        <h3 class="title is-5 has-text-weight-normal">评论</h3>
-        
-<div id="comment-container"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://www.wenjunjiang.win/js/gitment.js"></script>
-<script>
-	var gitment = new Gitment({
-		id: '2018/12/20/linux-common-command-manual-md/',
-		owner: 'huotaihe',
-		repo: 'huotaihe.github.io',
-		oauth: {
-			client_id: '67d4fdced7522e210c75',
-			client_secret: '1539dd9d89d920309cce0c5f45510d7af4607acb',
-		},
-	})
-	gitment.render('comment-container')
-</script>
-
-    </div>
-</div>
 </div>
                 
 

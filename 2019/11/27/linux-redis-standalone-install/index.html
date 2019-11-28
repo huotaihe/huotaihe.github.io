@@ -2,23 +2,23 @@
 <html  lang="zh">
 <head>
     <meta charset="utf-8">
-<title>Linux 常用命令手册 - 白马度和|Huotaihe</title>
+<title>Centos7 安装redis - 白马度和|Huotaihe</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
 
 
-    <meta name="description" content="收集工作中常用到的Linux 命令；只收集不易记忆的，常用的不在罗列都在脑子里。 目录管理查看当前目录总共占的容量，而不单独列出各子项占用的容量1du -sh">
-<meta name="keywords" content="Linux,Shell,Manual">
+    <meta name="description" content="redis Redis 是一个开源（BSD许可）的，内存中的数据结构存储系统，它可以用作数据库、缓存和消息中间件。 它支持多种类型的数据结构，如 字符串（strings）， 散列（hashes）， 列表（lists）， 集合（sets）， 有序集合（sorted sets） 与范围查询， bitmaps， hyperloglogs 和 地理空间（geospatial） 索引半径查询。 Redis">
+<meta name="keywords" content="temp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux 常用命令手册">
-<meta property="og:url" content="http://blog.huotaihe.com/2018/12/20/linux-common-command-manual-md/index.html">
+<meta property="og:title" content="Centos7 安装redis">
+<meta property="og:url" content="http://blog.huotaihe.com/2019/11/27/linux-redis-standalone-install/index.html">
 <meta property="og:site_name" content="白马度和|Huotaihe">
-<meta property="og:description" content="收集工作中常用到的Linux 命令；只收集不易记忆的，常用的不在罗列都在脑子里。 目录管理查看当前目录总共占的容量，而不单独列出各子项占用的容量1du -sh">
+<meta property="og:description" content="redis Redis 是一个开源（BSD许可）的，内存中的数据结构存储系统，它可以用作数据库、缓存和消息中间件。 它支持多种类型的数据结构，如 字符串（strings）， 散列（hashes）， 列表（lists）， 集合（sets）， 有序集合（sorted sets） 与范围查询， bitmaps， hyperloglogs 和 地理空间（geospatial） 索引半径查询。 Redis">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-23T10:11:44.855Z">
+<meta property="og:updated_time" content="2019-11-27T10:39:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux 常用命令手册">
-<meta name="twitter:description" content="收集工作中常用到的Linux 命令；只收集不易记忆的，常用的不在罗列都在脑子里。 目录管理查看当前目录总共占的容量，而不单独列出各子项占用的容量1du -sh">
+<meta name="twitter:title" content="Centos7 安装redis">
+<meta name="twitter:description" content="redis Redis 是一个开源（BSD许可）的，内存中的数据结构存储系统，它可以用作数据库、缓存和消息中间件。 它支持多种类型的数据结构，如 字符串（strings）， 散列（hashes）， 列表（lists）， 集合（sets）， 有序集合（sorted sets） 与范围查询， bitmaps， hyperloglogs 和 地理空间（geospatial） 索引半径查询。 Redis">
 
 
 
@@ -135,6 +135,10 @@ var _hmt = _hmt || [];
                     
                 
                 
+                <a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
                 
                 <a class="navbar-item search" title="搜索" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -154,17 +158,17 @@ var _hmt = _hmt || [];
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-20T11:58:58.142Z">2018-12-20</time>
+                <time class="level-item has-text-grey" datetime="2019-11-27T10:39:24.000Z">2019-11-27</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Linux-常用命令手册/">Linux 常用命令手册</a>
+                <a class="has-link-grey -link" href="/categories/temp/">temp</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分钟 读完 (大约 352 个字)
+                    3 分钟 读完 (大约 469 个字)
                 </span>
                 
             </div>
@@ -172,34 +176,30 @@ var _hmt = _hmt || [];
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                Linux 常用命令手册
+                Centos7 安装redis
             
         </h1>
         <div class="content">
-            <p>收集工作中常用到的Linux 命令；<br>只收集不易记忆的，常用的不在罗列都在脑子里。</p>
-<h2 id="目录管理"><a href="#目录管理" class="headerlink" title="目录管理"></a>目录管理</h2><h3 id="查看当前目录总共占的容量，而不单独列出各子项占用的容量"><a href="#查看当前目录总共占的容量，而不单独列出各子项占用的容量" class="headerlink" title="查看当前目录总共占的容量，而不单独列出各子项占用的容量"></a>查看当前目录总共占的容量，而不单独列出各子项占用的容量</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du -sh</span><br></pre></td></tr></table></figure>
+            <h2 id="redis"><a href="#redis" class="headerlink" title="redis"></a>redis</h2><blockquote>
+<p>Redis 是一个开源（BSD许可）的，内存中的数据结构存储系统，它可以用作数据库、缓存和消息中间件。 它支持多种类型的数据结构，如 字符串（strings）， 散列（hashes）， 列表（lists）， 集合（sets）， 有序集合（sorted sets） 与范围查询， bitmaps， hyperloglogs 和 地理空间（geospatial） 索引半径查询。 Redis 内置了 复制（replication），LUA脚本（Lua scripting）， LRU驱动事件（LRU eviction），事务（transactions） 和不同级别的 磁盘持久化（persistence）， 并通过 Redis哨兵（Sentinel）和自动 分区（Cluster）提供高可用性（high availability）</p>
+</blockquote>
 <a id="more"></a>
-<h3 id="查看当前目录下一级子文件和子目录占用的磁盘容量"><a href="#查看当前目录下一级子文件和子目录占用的磁盘容量" class="headerlink" title="查看当前目录下一级子文件和子目录占用的磁盘容量"></a>查看当前目录下一级子文件和子目录占用的磁盘容量</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du -lh --max-depth=1</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="系统管理"><a href="#系统管理" class="headerlink" title="系统管理"></a>系统管理</h2><h3 id="查看端口占用情况查看端口占用情况"><a href="#查看端口占用情况查看端口占用情况" class="headerlink" title="查看端口占用情况查看端口占用情况"></a>查看端口占用情况查看端口占用情况</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsof -i:&lt;port&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="查看操作系统的发行版本"><a href="#查看操作系统的发行版本" class="headerlink" title="查看操作系统的发行版本"></a>查看操作系统的发行版本</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsb_release -a</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>例子</p>
+<p>Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. It supports data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs, geospatial indexes with radius queries and streams. Redis has built-in replication, Lua scripting, LRU eviction, transactions and different levels of on-disk persistence, and provides high availability via Redis Sentinel and automatic partitioning with Redis Cluster.</p>
 </blockquote>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]<span class="hljs-comment"># lsb_release -a</span></span><br><span class="line">LSB Version:	:core-4.1-amd64:core-4.1-noarch</span><br><span class="line">Distributor ID:	CentOS</span><br><span class="line">Description:	CentOS Linux release 7.3.1611 (Core)</span><br><span class="line">Release:	7.3.1611</span><br><span class="line">Codename:	Core</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="VIM"><a href="#VIM" class="headerlink" title="VIM"></a>VIM</h2><h3 id="vim-统计字符串出现次数（词频）"><a href="#vim-统计字符串出现次数（词频）" class="headerlink" title="vim 统计字符串出现次数（词频）"></a>vim 统计字符串出现次数（词频）</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># &lt;pattern&gt; 是需要统计的字符串</span></span><br><span class="line">:%s/&lt;pattern&gt;//gn</span><br><span class="line"></span><br><span class="line">%s/Ø/\r/g</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">## 删除所有换行符号</span></span><br><span class="line">%s\/\n\/\/gc</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>% - 操作区间，全文本；可以使用1, $或行区间替代<br>    s - substitute<br>    <pattern> - 查询字符串<br>    // - 无替代文本。如果偏好，中间可以加任意字符！建议添加‘～’,重复上次查询<br>    g - Replace all occurrences in the line.  Without this argument,  replacement occurs only for the first occurrence in each line.因此，如果不用此标志，就变成统计出现pattern的行数。<br>    n - Report the number of matches, do not actually substitute.这是核心标志，也是达到目的的标志。同时也说明了为什么’//‘之间可以添加任意字符！</pattern></p>
-</blockquote>
-
+<h2 id="下载解压"><a href="#下载解压" class="headerlink" title="下载解压"></a>下载解压</h2><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">## 切换目录</span></span><br><span class="line"><span class="hljs-built_in">cd</span> /usr/<span class="hljs-built_in">local</span>/src</span><br><span class="line"><span class="hljs-comment">## 下载文件</span></span><br><span class="line">wget http://download.redis.io/releases/redis-5.0.7.tar.gz</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">## 解压</span></span><br><span class="line">tar -xzvf redis-5.0.7.tar.gz</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">## 将文件移动到安装目录</span></span><br><span class="line">mv redis-5.0.7 /usr/<span class="hljs-built_in">local</span>/redis</span><br></pre></td></tr></table></figure>
+<h2 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h2><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">## 切换目录</span></span><br><span class="line"><span class="hljs-built_in">cd</span> /usr/<span class="hljs-built_in">local</span>/redis</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">## 编译安装</span></span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+<h2 id="查看安装结果"><a href="#查看安装结果" class="headerlink" title="查看安装结果"></a>查看安装结果</h2><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">cd</span> /usr/<span class="hljs-built_in">local</span>/bin/</span><br><span class="line">ll</span><br></pre></td></tr></table></figure>
+<p>ll结果输出如下说明安装成功<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-rwxr-xr-x 1 root root 4366848 Nov 27 19:14 redis-benchmark</span><br><span class="line">-rwxr-xr-x 1 root root 8125240 Nov 27 19:14 redis-check-aof</span><br><span class="line">-rwxr-xr-x 1 root root 8125240 Nov 27 19:14 redis-check-rdb</span><br><span class="line">-rwxr-xr-x 1 root root 4807920 Nov 27 19:14 redis-cli</span><br><span class="line">lrwxrwxrwx 1 root root      12 Nov 27 19:14 redis-sentinel -&gt; redis-server</span><br><span class="line">-rwxr-xr-x 1 root root 8125240 Nov 27 19:14 redis-server</span><br></pre></td></tr></table></figure></p>
+<h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">## 通过默认配置启动</span></span><br><span class="line">/usr/<span class="hljs-built_in">local</span>/bin/redis-server</span><br><span class="line"><span class="hljs-comment">## 查看是否运行</span></span><br><span class="line">[root@baimaduhe bin]<span class="hljs-comment"># ps -ef |grep redis</span></span><br><span class="line">root      6058  6007  0 22:05 pts/1    00:00:00 ./redis-server *:6379</span><br><span class="line">root      6063  5899  0 22:05 pts/0    00:00:00 grep --color=auto redis</span><br></pre></td></tr></table></figure>
+<h2 id="连接测试"><a href="#连接测试" class="headerlink" title="连接测试"></a>连接测试</h2><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@baimaduhe bin]<span class="hljs-comment"># /usr/local/bin/redis-cli</span></span><br><span class="line">127.0.0.1:6379&gt; <span class="hljs-built_in">set</span> key1 hello</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; get key1</span><br><span class="line"><span class="hljs-string">"hello"</span></span><br><span class="line">127.0.0.1:6379&gt;</span><br></pre></td></tr></table></figure>
         </div>
         
         <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/Linux/">Linux</a>, <a class="has-link-grey -link" href="/tags/Manual/">Manual</a>, <a class="has-link-grey -link" href="/tags/Shell/">Shell</a>
+                    <a class="has-link-grey -link" href="/tags/temp/">temp</a>
                 </div>
             </div>
         </div>
@@ -255,17 +255,10 @@ var _hmt = _hmt || [];
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/04/17/rabbitmq-install-on-centos7-md/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">在Centos7 上搭建rabbitmq</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2018/12/18/git-commond-manual-md/">
-                <span class="level-item">git 常用命令手册</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/15/linux-kafka-broker-install/">
+                <span class="level-item">Kafka broker 安装</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -284,7 +277,7 @@ var _hmt = _hmt || [];
 <script src="https://www.wenjunjiang.win/js/gitment.js"></script>
 <script>
 	var gitment = new Gitment({
-		id: '2018/12/20/linux-common-command-manual-md/',
+		id: '2019/11/27/linux-redis-standalone-install/',
 		owner: 'huotaihe',
 		repo: 'huotaihe.github.io',
 		oauth: {
@@ -480,6 +473,41 @@ var _hmt = _hmt || [];
         <div class="column-right-shadow is-hidden-widescreen ">
         
             
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#redis">
+        <span class="has-mr-6">1</span>
+        <span>redis</span>
+        </a></li><li>
+        <a class="is-flex" href="#下载解压">
+        <span class="has-mr-6">2</span>
+        <span>下载解压</span>
+        </a></li><li>
+        <a class="is-flex" href="#编译安装">
+        <span class="has-mr-6">3</span>
+        <span>编译安装</span>
+        </a></li><li>
+        <a class="is-flex" href="#查看安装结果">
+        <span class="has-mr-6">4</span>
+        <span>查看安装结果</span>
+        </a></li><li>
+        <a class="is-flex" href="#启动">
+        <span class="has-mr-6">5</span>
+        <span>启动</span>
+        </a></li><li>
+        <a class="is-flex" href="#连接测试">
+        <span class="has-mr-6">6</span>
+        <span>连接测试</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
         
             
 <div class="card widget">
@@ -845,6 +873,41 @@ var _hmt = _hmt || [];
 <div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
     
         
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                目录
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#redis">
+        <span class="has-mr-6">1</span>
+        <span>redis</span>
+        </a></li><li>
+        <a class="is-flex" href="#下载解压">
+        <span class="has-mr-6">2</span>
+        <span>下载解压</span>
+        </a></li><li>
+        <a class="is-flex" href="#编译安装">
+        <span class="has-mr-6">3</span>
+        <span>编译安装</span>
+        </a></li><li>
+        <a class="is-flex" href="#查看安装结果">
+        <span class="has-mr-6">4</span>
+        <span>查看安装结果</span>
+        </a></li><li>
+        <a class="is-flex" href="#启动">
+        <span class="has-mr-6">5</span>
+        <span>启动</span>
+        </a></li><li>
+        <a class="is-flex" href="#连接测试">
+        <span class="has-mr-6">6</span>
+        <span>连接测试</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
     
         
 <div class="card widget">
