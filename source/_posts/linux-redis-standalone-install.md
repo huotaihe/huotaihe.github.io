@@ -2,9 +2,10 @@
 title: Centos7 安装redis
 toc: true
 categories:
-  - temp
+  - Redis 
 tags:
-  - temp
+  - Redis
+  - 环境搭建
 date: 2019-11-27 18:39:24
 updated: 2019-11-27 18:39:24
 ---
