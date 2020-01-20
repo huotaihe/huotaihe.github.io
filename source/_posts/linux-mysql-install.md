@@ -1,8 +1,8 @@
 ---
-title: CentOS 安装 Mysql
+title: 【服务器环境搭建】之 CentOS 安装 Mysql
 toc: true
 categories:
-  - Mysql 
+  - 服务器环境搭建 
 tags:
   - Linux
   - Mysql
@@ -106,3 +106,4 @@ mycli -u root -p<your_password> -h <service ip> -P 3306
 # 参考资料
 - https://www.cnblogs.com/123hll/p/9633422.html
 - https://blog.csdn.net/muziljx/article/details/81541896
+- https://www.mysql.com/
