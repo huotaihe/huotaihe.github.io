@@ -2,9 +2,9 @@
 title: 记一次Linux磁盘分区写入失败的事件
 toc: true
 categories:
-  - temp
+  - [生产问题解决]
 tags:
-  - temp
+  - Linux 
 date: 2019-12-27 10:42:25
 updated: 2019-12-27 10:42:25
 ---

@@ -2,9 +2,11 @@
 title: Kafka broker 安装
 toc: true
 categories:
-  - temp
+  - 服务器环境搭建
 tags:
-  - temp
+  - Kafka
+  - 环境搭建
+  - Linux
 date: 2019-08-15 13:20:05
 updated: 2019-08-15 13:20:05
 ---

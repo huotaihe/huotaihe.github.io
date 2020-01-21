@@ -1,10 +1,10 @@
 ---
 title: 【深入学习Mybatis】Chapter1源码调试环境搭建
 toc: true
-categories:
-  - temp
+categories: [Mybatis]
 tags:
-  - temp
+  - 源码
+  - Mybatis
 date: 2020-01-10 18:09:40
 updated: 2020-01-10 18:09:40
 ---

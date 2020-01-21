@@ -2,9 +2,11 @@
 title: Linux 下批量重命名文件
 toc: true
 categories:
-  - temp
+  - Linux 常用命令手册
 tags:
-  - temp
+  - Linux
+  - Shell
+  - Manual
 date: 2019-06-05 19:21:31
 updated: 2019-06-05 19:21:31
 ---

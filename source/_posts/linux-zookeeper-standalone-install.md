@@ -2,9 +2,11 @@
 title: Zookeeper 单点环境搭建
 toc: true
 categories:
-  - temp
+  - 服务器环境搭建
 tags:
-  - temp
+  - Zookeeper
+  - 环境搭建
+  - Linux
 date: 2019-08-15 10:46:59
 updated: 2019-08-15 10:46:59
 ---
